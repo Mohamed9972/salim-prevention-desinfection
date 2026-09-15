@@ -1,9 +1,9 @@
-import { ArrowRight, BadgeCheck, Bug, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, Phone, ShieldCheck } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { Reveal } from "./Reveal";
-import { HeroVisual } from "./HeroVisual";
+import { HeroPhoto } from "./HeroPhoto";
 
 export function HomeHero({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
@@ -63,45 +63,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
 
         <Reveal delay={120}>
           <div className="relative mx-auto w-full max-w-[440px]">
-            <div className="overflow-hidden rounded-[28px] border border-ink-100 bg-gradient-to-b from-ink-900 via-ink-800 to-brand-950 p-7 text-white shadow-[0_24px_60px_rgba(11,21,26,0.22)] sm:p-8">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-[13px] font-semibold">
-                  <Bug size={15} aria-hidden="true" />
-                  {t.hero.cardTitle}
-                </span>
-                <ShieldCheck size={34} aria-hidden="true" className="text-brand-300" />
-              </div>
-              <div className="mt-6">
-                <HeroVisual />
-              </div>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {t.hero.cardItems.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-[13px] font-medium text-white/85 ring-1 ring-white/10"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 text-sm leading-relaxed text-white/70">{t.hero.cardNote}</p>
-              <div className="mt-5 flex items-center justify-between rounded-2xl bg-brand-600 px-5 py-4">
-                <div>
-                  <p className="text-[13px] font-medium text-white/80">{t.hero.responseTitle}</p>
-                  <p dir="ltr" className="text-xl font-extrabold tracking-wide tabular-nums">
-                    {PHONE_DISPLAY}
-                  </p>
-                </div>
-                <a
-                  href={PHONE_TEL}
-                  aria-label={locale === "ar" ? "اتصل الآن" : "Appeler maintenant"}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-700 transition-transform hover:scale-105"
-                >
-                  <Phone size={20} aria-hidden="true" />
-                </a>
-              </div>
-              <p className="mt-3 text-center text-xs text-white/70">{t.hero.responseText}</p>
-            </div>
+            <HeroPhoto locale={locale} />
           </div>
         </Reveal>
       </div>

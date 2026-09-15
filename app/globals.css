@@ -52,45 +52,6 @@ select {
   caret-color: var(--color-brand-700);
 }
 
-/* Hero scene motion: drifting spray mist + shield pulse (transform/opacity only) */
-@media (prefers-reduced-motion: no-preference) {
-  .mist-dot {
-    animation: mist-drift 2.8s linear infinite;
-  }
-  .pulse-ring {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: ring-pulse 3.2s ease-out infinite;
-  }
-}
-@keyframes mist-drift {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  18% {
-    opacity: 0.95;
-  }
-  100% {
-    transform: translate(-52px, 10px);
-    opacity: 0;
-  }
-}
-@keyframes ring-pulse {
-  0% {
-    transform: scale(0.94);
-    opacity: 0.6;
-  }
-  70% {
-    transform: scale(1.04);
-    opacity: 0.15;
-  }
-  100% {
-    transform: scale(1.04);
-    opacity: 0;
-  }
-}
-
 /* Visible focus for keyboard navigation */
 :focus-visible {
   outline: 3px solid var(--color-brand-500);
