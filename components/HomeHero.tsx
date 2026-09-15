@@ -6,14 +6,14 @@ import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 /**
- * Full-bleed photographic hero.
- * To swap the visual, replace `public/hero-intervention.jpg` (landscape,
- * subject ideally offset from the text side) — no code change needed.
+ * Full-bleed photographic hero, full viewport height so the services
+ * only appear after scrolling. Content stays on the left in both
+ * languages (explicit choice: Arabic block is LTR-positioned).
+ * To swap the visual, replace `public/hero-intervention.jpg` (landscape).
  */
 export function HomeHero({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   const h = t.home.hero;
-  const isRtl = locale === "ar";
 
   return (
     <section id="accueil" className="relative overflow-hidden bg-ink-950 text-white">
@@ -36,11 +36,12 @@ export function HomeHero({ locale }: { locale: Locale }) {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-ink-950/85 via-ink-950/40 to-transparent rtl:bg-gradient-to-l"
+        className="absolute inset-0 bg-gradient-to-r from-ink-950/85 via-ink-950/40 to-transparent"
       />
 
-      <div className="relative mx-auto flex min-h-[600px] w-full max-w-6xl items-center px-4 py-20 sm:px-6 md:min-h-[660px] md:py-24">
-        <Reveal className="max-w-2xl">
+      <div dir="ltr" className="relative mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-6xl items-center px-4 py-16 sm:px-6 md:min-h-[calc(100svh-4.5rem)] md:py-20">
+        <Reveal className="max-w-2xl" >
+          <div dir="ltr">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[13px] font-semibold text-white backdrop-blur-sm">
             <ShieldCheck size={15} aria-hidden="true" className="text-brand-300" />
             {h.badge}
@@ -61,7 +62,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
               <ArrowRight
                 size={18}
                 aria-hidden="true"
-                className={`transition-transform group-hover:translate-x-0.5 ${isRtl ? "rotate-180" : ""}`}
+                className="transition-transform group-hover:translate-x-0.5"
               />
             </a>
             <a
@@ -94,6 +95,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                 </li>
               ))}
             </ul>
+          </div>
           </div>
         </Reveal>
       </div>
