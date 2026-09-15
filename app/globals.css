@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-inter), var(--font-arabic), ui-sans-serif, system-ui,
+    "Segoe UI", Tahoma, Arial, sans-serif;
+
+  --color-brand-50: #eef8fa;
+  --color-brand-100: #d7eef3;
+  --color-brand-200: #b0dde7;
+  --color-brand-300: #7cc4d4;
+  --color-brand-400: #45a5bc;
+  --color-brand-500: #2989a3;
+  --color-brand-600: #0e7490;
+  --color-brand-700: #0f6278;
+  --color-brand-800: #134f61;
+  --color-brand-900: #143e4e;
+  --color-brand-950: #0a2833;
+
+  --color-ink-50: #f6f8f9;
+  --color-ink-100: #e9eef1;
+  --color-ink-200: #d3dde2;
+  --color-ink-300: #b0c2cb;
+  --color-ink-400: #86a1ad;
+  --color-ink-500: #668491;
+  --color-ink-600: #546d78;
+  --color-ink-700: #465963;
+  --color-ink-800: #22333b;
+  --color-ink-900: #132027;
+  --color-ink-950: #0b151a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-brand-600);
+  color: #fff;
+}
+
+/* Visible focus for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Light reveal animation (disabled on reduced motion) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  [dir="rtl"] .reveal {
+    transform: translateY(18px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Prevent mobile CTA from hiding footer content */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
