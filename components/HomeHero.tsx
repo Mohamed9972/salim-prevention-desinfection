@@ -1,8 +1,9 @@
-import { ArrowRight, BadgeCheck, Bug, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck, Bug, Phone, ShieldCheck } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { Reveal } from "./Reveal";
+import { HeroVisual } from "./HeroVisual";
 
 export function HomeHero({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
@@ -70,15 +71,15 @@ export function HomeHero({ locale }: { locale: Locale }) {
                 </span>
                 <ShieldCheck size={34} aria-hidden="true" className="text-brand-300" />
               </div>
-              <ul className="mt-6 space-y-3">
+              <div className="mt-6">
+                <HeroVisual />
+              </div>
+              <ul className="mt-5 flex flex-wrap gap-2">
                 {t.hero.cardItems.map((item) => (
                   <li
                     key={item}
-                    className="flex items-center gap-3 rounded-2xl bg-white/[0.07] px-4 py-3 text-[15px] font-medium ring-1 ring-white/10"
+                    className="rounded-full bg-white/[0.07] px-3.5 py-1.5 text-[13px] font-medium text-white/85 ring-1 ring-white/10"
                   >
-                    <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-500/25">
-                      <Sparkles size={15} className="text-brand-200" />
-                    </span>
                     {item}
                   </li>
                 ))}
