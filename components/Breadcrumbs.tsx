@@ -17,7 +17,7 @@ export function Breadcrumbs({
       aria-label={locale === "ar" ? "مسار التنقل" : "Fil d'Ariane"}
       className="mx-auto max-w-6xl px-4 pt-6 sm:px-6"
     >
-      <ol className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium text-ink-500">
+      <ol className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium text-ink-600">
         {items.map((item, i) => {
           const last = i === items.length - 1;
           return (

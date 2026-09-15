@@ -25,13 +25,13 @@ export function CtaBlock({
             <h2 className="relative text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">
               {title ?? t.ctaBlock.title}
             </h2>
-            <p dir="ltr" className="relative mt-3 text-2xl font-extrabold tracking-wide text-brand-200 sm:text-3xl">
+            <p dir="ltr" className="relative mt-3 text-2xl font-extrabold tracking-wide text-brand-200 tabular-nums sm:text-3xl">
               {PHONE_DISPLAY}
             </p>
             <div className="relative mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
               <a
                 href={PHONE_TEL}
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-white px-7 text-base font-bold text-ink-900 transition-all hover:-translate-y-0.5 hover:bg-brand-50"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-white px-7 text-base font-bold text-ink-900 transition-all hover:-translate-y-0.5 hover:bg-brand-50 active:translate-y-0 active:scale-[0.98]"
               >
                 <Phone size={18} aria-hidden="true" />
                 {t.mobileCta.call}
@@ -40,14 +40,14 @@ export function CtaBlock({
                 href={WHATSAPP_BASE}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-[#1FA855] px-7 text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-[#1FA855] px-7 text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[0.98]"
               >
                 <MessageCircle size={18} aria-hidden="true" />
                 {t.mobileCta.whatsapp}
               </a>
               <a
                 href={`/${locale}/contact`}
-                className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border border-white/25 px-7 text-base font-bold text-white transition-colors hover:bg-white/10"
+                className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border border-white/25 px-7 text-base font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
               >
                 {t.nav.cta}
                 <ArrowRight size={18} aria-hidden="true" className={isRtl ? "rotate-180" : ""} />

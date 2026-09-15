@@ -44,8 +44,8 @@ export function LanguageSwitcher({
             aria-current="true"
             className={
               variant === "dark"
-                ? "rounded-full bg-white px-3 py-1.5 text-ink-900"
-                : "rounded-full bg-ink-900 px-3 py-1.5 text-white"
+                ? "rounded-full bg-white px-3 py-2 text-ink-900"
+                : "rounded-full bg-ink-900 px-3 py-2 text-white"
             }
           >
             {localeNames[l]}
@@ -57,8 +57,8 @@ export function LanguageSwitcher({
             hrefLang={l}
             className={
               variant === "dark"
-                ? "rounded-full px-3 py-1.5 text-white/75 transition-colors hover:text-white"
-                : "rounded-full px-3 py-1.5 text-ink-600 transition-colors hover:text-ink-900"
+                ? "rounded-full px-3 py-2 text-white/75 transition-colors hover:text-white"
+                : "rounded-full px-3 py-2 text-ink-600 transition-colors hover:text-ink-900"
             }
           >
             {localeNames[l]}

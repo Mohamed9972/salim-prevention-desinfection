@@ -46,6 +46,12 @@ body {
   color: #fff;
 }
 
+input,
+textarea,
+select {
+  caret-color: var(--color-brand-700);
+}
+
 /* Visible focus for keyboard navigation */
 :focus-visible {
   outline: 3px solid var(--color-brand-500);

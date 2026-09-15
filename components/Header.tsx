@@ -74,7 +74,7 @@ export function Header({ locale }: { locale: Locale }) {
     exact ? pathname === href : pathname?.startsWith(href) ?? false;
 
   const linkCls = (active: boolean) =>
-    `rounded-lg px-1 py-2 text-[15px] font-medium transition-colors hover:text-brand-700 ${
+    `whitespace-nowrap rounded-lg px-1 py-2 text-[15px] font-medium transition-colors hover:text-brand-700 ${
       active ? "font-bold text-brand-700" : "text-ink-700"
     }`;
 
@@ -86,11 +86,11 @@ export function Header({ locale }: { locale: Locale }) {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 md:h-[72px]">
         <Link href={`/${locale}`} onClick={closeAll} aria-label={locale === "ar" ? "سليم — الرئيسية" : "Salim — accueil"} className="shrink-0">
-          <Logo locale={locale} />
+          <Logo locale={locale} compact />
         </Link>
 
-        <nav aria-label={locale === "ar" ? "التنقل الرئيسي" : "Navigation principale"} className="hidden items-center gap-6 lg:flex">
-          <Link href={`/${locale}`} onClick={closeAll} className={linkCls(isActive(`/${locale}`, true))}>
+        <nav aria-label={locale === "ar" ? "التنقل الرئيسي" : "Navigation principale"} className="hidden items-center gap-5 lg:flex">
+          <Link href={`/${locale}`} onClick={closeAll} aria-current={pathname === `/${locale}` ? "page" : undefined} className={linkCls(isActive(`/${locale}`, true))}>
             {t.nav.home}
           </Link>
 
@@ -100,7 +100,7 @@ export function Header({ locale }: { locale: Locale }) {
             onMouseLeave={scheduleCloseDrop}
           >
             <div className="flex items-center">
-              <Link href={servicesHref} onClick={closeAll} className={linkCls(isServicesActive)}>
+              <Link href={servicesHref} onClick={closeAll} aria-current={isServicesActive ? "page" : undefined} className={linkCls(isServicesActive)}>
                 {t.nav.services}
               </Link>
               <button
@@ -109,7 +109,7 @@ export function Header({ locale }: { locale: Locale }) {
                 aria-expanded={dropOpen}
                 aria-haspopup="true"
                 aria-label={t.nav.services}
-                className={`-ms-0.5 rounded p-1.5 ${isServicesActive ? "text-brand-700" : "text-ink-500"} hover:text-brand-700`}
+                className={`-ms-0.5 inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded-lg ${isServicesActive ? "text-brand-700" : "text-ink-500"} transition-colors hover:bg-brand-50 hover:text-brand-700`}
               >
                 <ChevronDown
                   size={16}
@@ -126,6 +126,7 @@ export function Header({ locale }: { locale: Locale }) {
                       <Link
                         href={`/${locale}/services/${s.slug}`}
                         onClick={closeAll}
+                        aria-current={pathname === `/${locale}/services/${s.slug}` ? "page" : undefined}
                         className="block rounded-xl px-4 py-2.5 text-[15px] font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-800"
                       >
                         {s.name}
@@ -138,7 +139,7 @@ export function Header({ locale }: { locale: Locale }) {
           </div>
 
           {links.slice(1).map((l) => (
-            <Link key={l.href} href={l.href} onClick={closeAll} className={linkCls(isActive(l.href, l.exact))}>
+            <Link key={l.href} href={l.href} onClick={closeAll} aria-current={isActive(l.href, l.exact) ? "page" : undefined} className={linkCls(isActive(l.href, l.exact))}>
               {l.label}
             </Link>
           ))}
@@ -155,12 +156,14 @@ export function Header({ locale }: { locale: Locale }) {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
-          <LanguageSwitcher locale={locale} />
+        <div className="flex min-w-0 items-center gap-2 lg:hidden">
+          <div className="hidden min-[480px]:block">
+            <LanguageSwitcher locale={locale} />
+          </div>
           <a
             href={PHONE_TEL}
             aria-label={locale === "ar" ? "اتصل 50 431 208" : "Appeler le 50 431 208"}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-brand-700"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-50 text-brand-700"
           >
             <Phone size={18} aria-hidden="true" />
           </a>
@@ -169,7 +172,7 @@ export function Header({ locale }: { locale: Locale }) {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? t.nav.close : t.nav.menu}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-900"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-200 text-ink-900"
           >
             {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>
@@ -182,9 +185,13 @@ export function Header({ locale }: { locale: Locale }) {
             aria-label={locale === "ar" ? "قائمة الجوال" : "Menu mobile"}
             className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6"
           >
+            <div className="px-4 pb-2 pt-1 min-[480px]:hidden">
+              <LanguageSwitcher locale={locale} />
+            </div>
             <Link
               href={`/${locale}`}
               onClick={closeAll}
+              aria-current={pathname === `/${locale}` ? "page" : undefined}
               className="rounded-xl px-4 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-800"
             >
               {t.nav.home}
@@ -235,6 +242,7 @@ export function Header({ locale }: { locale: Locale }) {
                 key={l.href}
                 href={l.href}
                 onClick={closeAll}
+                aria-current={pathname === l.href ? "page" : undefined}
                 className="rounded-xl px-4 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-800"
               >
                 {l.label}

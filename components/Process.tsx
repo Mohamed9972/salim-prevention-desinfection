@@ -27,8 +27,8 @@ export function Process({ locale }: { locale: Locale }) {
         <Reveal>
           <div className="mt-8 text-center">
             <a
-              href={`/${locale}#contact`}
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-8 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800"
+              href={`/${locale}/contact`}
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-8 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800 active:translate-y-0 active:scale-[0.98]"
             >
               {t.process.cta}
               <ArrowRight size={18} aria-hidden="true" className={isRtl ? "rotate-180" : ""} />

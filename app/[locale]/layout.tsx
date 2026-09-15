@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
@@ -25,6 +25,10 @@ const arabic = Noto_Sans_Arabic({
 export function generateStaticParams() {
   return [{ locale: "fr" }, { locale: "ar" }];
 }
+
+export const viewport: Viewport = {
+  themeColor: "#0b151a",
+};
 
 export async function generateMetadata({
   params,

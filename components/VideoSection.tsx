@@ -72,7 +72,7 @@ export function VideoSection({ locale }: { locale: Locale }) {
         <Reveal>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <a
-              href={`/${locale}#contact`}
+                href={`/${locale}/contact`}
               className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-8 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800"
             >
               {t.video.cta}

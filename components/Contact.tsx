@@ -17,7 +17,7 @@ import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
 const inputCls =
-  "w-full rounded-2xl border border-ink-200 bg-white px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-400 transition-colors focus:border-brand-500 focus:outline-none";
+  "w-full rounded-2xl border border-ink-200 bg-white px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-600 transition-colors focus:border-brand-500 focus:outline-none";
 const labelCls = "mb-1.5 block text-sm font-bold text-ink-800";
 const errCls = "mt-1.5 text-[13px] font-medium text-red-700";
 
@@ -176,12 +176,12 @@ export function Contact({ locale }: { locale: Locale }) {
               <div className="mt-6 flex flex-col gap-3">
                 <button
                   type="submit"
-                  className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+                  className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800 active:translate-y-0 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
                 >
                   <MessageCircle size={19} aria-hidden="true" />
                   {touched && !valid ? f.viaWhatsapp : f.submit}
                 </button>
-                <p className="text-center text-[13px] leading-relaxed text-ink-500">{f.hint}</p>
+                <p className="text-center text-[13px] leading-relaxed text-ink-600">{f.hint}</p>
                 <a
                   href={PHONE_TEL}
                   className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-900 px-7 text-base font-bold text-ink-900 transition-colors hover:bg-ink-900 hover:text-white"
@@ -209,7 +209,7 @@ export function Contact({ locale }: { locale: Locale }) {
                   </span>
                   <span>
                     <span className="block text-[13px] font-medium text-white/65">{t.contact.direct.call}</span>
-                    <span dir="ltr" className="block text-xl font-extrabold tracking-wide">{PHONE_DISPLAY}</span>
+                    <span dir="ltr" className="block text-xl font-extrabold tracking-wide tabular-nums">{PHONE_DISPLAY}</span>
                   </span>
                 </a>
                 <a

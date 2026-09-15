@@ -785,7 +785,7 @@ export const fr = {
     eyebrow: "Avis clients",
     title: "Ce que disent nos clients",
     subtitle:
-      "Des retours publiés par nos clients sur notre page Facebook.",
+      "Nos publications et les retours de nos clients, directement depuis notre page Facebook.",
     watchOn: "Voir sur Facebook",
     frameLabel: "Avis client publié sur Facebook",
   },
@@ -1597,7 +1597,7 @@ export const ar: Dictionary = {
   reviews: {
     eyebrow: "آراء الحرفاء",
     title: "شنوّا يقولو علينا حرفاؤنا",
-    subtitle: "آراء نشرها حرفاؤنا على صفحتنا في فيسبوك.",
+    subtitle: "منشوراتنا وآراء حرفائنا مباشرة من صفحتنا على فيسبوك.",
     watchOn: "شاهد على فيسبوك",
     frameLabel: "رأي حريف منشور على فيسبوك",
   },

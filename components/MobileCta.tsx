@@ -19,7 +19,7 @@ export function MobileCta({ locale }: { locale: Locale }) {
           className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-2xl bg-ink-900 text-[15px] font-bold text-white active:scale-[0.98]"
         >
           <Phone size={18} aria-hidden="true" />
-          {t.mobileCta.call} · <span dir="ltr" className="tracking-wide">{PHONE_DISPLAY}</span>
+          {t.mobileCta.call} · <span dir="ltr" className="tracking-wide tabular-nums">{PHONE_DISPLAY}</span>
         </a>
         <a
           href={WHATSAPP_BASE}

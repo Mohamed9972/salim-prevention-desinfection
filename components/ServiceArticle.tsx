@@ -137,7 +137,7 @@ export function ServiceArticle({
           <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
             <Reveal>
               <h2 className="text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
-                {"placesTitle" in data ? data.placesTitle : ""}
+                {data.placesTitle}
               </h2>
               <ul className="mt-5 flex flex-wrap gap-2.5">
                 {data.places.map((p) => (

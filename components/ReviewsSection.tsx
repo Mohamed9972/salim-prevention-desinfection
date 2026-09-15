@@ -35,7 +35,7 @@ export function ReviewsSection({ locale }: { locale: Locale }) {
             <Reveal key={post.watch} delay={Math.min(i * 120, 240)}>
               <figure className="flex flex-col items-center">
                 <div className="overflow-hidden rounded-[24px] border border-ink-100 bg-white shadow-[0_16px_44px_rgba(11,21,26,0.10)]">
-                  <p className="border-b border-ink-100 px-5 py-3 text-[13px] font-semibold text-ink-500">
+                  <p className="border-b border-ink-100 px-5 py-3 text-[13px] font-semibold text-ink-600">
                     Facebook
                   </p>
                   <iframe

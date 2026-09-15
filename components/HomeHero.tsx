@@ -32,7 +32,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href={`/${locale}/contact`}
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800 active:translate-y-0 active:scale-[0.98]"
             >
               {h.primary}
               <ArrowRight
@@ -43,7 +43,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
             </a>
             <a
               href={PHONE_TEL}
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-900 bg-white px-7 text-base font-bold text-ink-900 transition-colors hover:bg-ink-900 hover:text-white"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-900 bg-white px-7 text-base font-bold text-ink-900 transition-all hover:bg-ink-900 hover:text-white active:scale-[0.98]"
             >
               <Phone size={18} aria-hidden="true" />
               <span dir="ltr">{PHONE_DISPLAY}</span>
@@ -87,7 +87,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
               <div className="mt-5 flex items-center justify-between rounded-2xl bg-brand-600 px-5 py-4">
                 <div>
                   <p className="text-[13px] font-medium text-white/80">{t.hero.responseTitle}</p>
-                  <p dir="ltr" className="text-xl font-extrabold tracking-wide">
+                  <p dir="ltr" className="text-xl font-extrabold tracking-wide tabular-nums">
                     {PHONE_DISPLAY}
                   </p>
                 </div>
@@ -99,16 +99,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
                   <Phone size={20} aria-hidden="true" />
                 </a>
               </div>
-              <p className="mt-3 text-center text-xs text-white/55">{t.hero.responseText}</p>
-            </div>
-
-            <div className="absolute -bottom-5 start-5 rounded-2xl border border-ink-100 bg-white px-4 py-3 shadow-lg">
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink-400">
-                Lac 3 · Tunis
-              </p>
-              <p className="text-sm font-bold text-ink-900">
-                {locale === "ar" ? "تونس الكبرى" : "Grand Tunis"}
-              </p>
+              <p className="mt-3 text-center text-xs text-white/70">{t.hero.responseText}</p>
             </div>
           </div>
         </Reveal>

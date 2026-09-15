@@ -42,7 +42,7 @@ export function PageHero({
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href={`/${locale}/${ctaTo}`}
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800 active:translate-y-0 active:scale-[0.98]"
             >
               {t.nav.cta}
               <ArrowRight
@@ -53,7 +53,7 @@ export function PageHero({
             </a>
             <a
               href={PHONE_TEL}
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-900 bg-white px-7 text-base font-bold text-ink-900 transition-colors hover:bg-ink-900 hover:text-white"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-900 bg-white px-7 text-base font-bold text-ink-900 transition-all hover:bg-ink-900 hover:text-white active:scale-[0.98]"
             >
               <Phone size={18} aria-hidden="true" />
               <span dir="ltr">{PHONE_DISPLAY}</span>

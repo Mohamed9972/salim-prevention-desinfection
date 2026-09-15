@@ -22,7 +22,7 @@ export function Footer({ locale }: { locale: Locale }) {
           <p className="mt-2 text-sm font-medium text-white/50">{COMPANY_AR}</p>
           <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-white/70">{t.footer.tagline}</p>
           <div className="mt-5 flex flex-col items-start gap-2">
-            <span className="text-[13px] font-semibold uppercase tracking-wider text-white/45">
+            <span className="text-[13px] font-semibold uppercase tracking-wider text-white/60">
               {t.footer.langLabel}
             </span>
             <LanguageSwitcher locale={locale} variant="dark" />
@@ -30,7 +30,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
 
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-white/45">{t.footer.servicesTitle}</h2>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-white/60">{t.footer.servicesTitle}</h2>
           <ul className="mt-4 space-y-2.5">
             <li>
               <a href={`/${locale}/services`} className="text-[15px] font-bold text-white transition-colors hover:text-brand-200">
@@ -48,7 +48,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
 
         <nav aria-label={t.footer.navTitle}>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-white/45">{t.footer.navTitle}</h2>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-white/60">{t.footer.navTitle}</h2>
           <ul className="mt-4 space-y-2.5">
             {nav.map((l) => (
               <li key={l.href + l.label}>
@@ -61,7 +61,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </nav>
 
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-white/45">{t.footer.contactTitle}</h2>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-white/60">{t.footer.contactTitle}</h2>
           <ul className="mt-4 space-y-3 text-[15px]">
             <li>
               <a href={PHONE_TEL} className="flex items-center gap-2.5 font-bold text-white hover:text-brand-200">
@@ -85,7 +85,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <p className="mx-auto max-w-6xl px-4 py-5 text-center text-sm text-white/55 sm:px-6">
+        <p className="mx-auto max-w-6xl px-4 py-5 text-center text-sm text-white/65 sm:px-6">
           {t.footer.rights}
         </p>
       </div>
