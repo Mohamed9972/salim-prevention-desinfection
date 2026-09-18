@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_Arabic } from "next/font/google";
+import { Archivo, Bricolage_Grotesque, Cairo } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import "../globals.css";
@@ -10,24 +10,33 @@ import { getDictionary } from "@/lib/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
 
-const inter = Inter({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-bricolage",
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
-const arabic = Noto_Sans_Arabic({
+const body = Archivo({
+  subsets: ["latin"],
+  variable: "--font-archivo",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const arabic = Cairo({
   subsets: ["arabic"],
-  variable: "--font-arabic",
+  variable: "--font-cairo",
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
 export function generateStaticParams() {
-  return [{ locale: "fr" }, { locale: "ar" }];
+  return [{ locale: "ar" }, { locale: "fr" }];
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0b151a",
+  themeColor: "#071814",
 };
 
 export async function generateMetadata({
@@ -46,9 +55,14 @@ export async function generateMetadata({
     alternates: {
       canonical: path,
       languages: {
-        fr: "/fr",
+        "x-default": "/ar",
         ar: "/ar",
+        fr: "/fr",
       },
+    },
+    icons: {
+      icon: "/logo.png",
+      apple: "/logo.png",
     },
     openGraph: {
       title: t.meta.title,
@@ -61,6 +75,17 @@ export async function generateMetadata({
       locale: locale === "ar" ? "ar_TN" : "fr_FR",
       alternateLocale: locale === "ar" ? ["fr_FR"] : ["ar_TN"],
       type: "website",
+      images: [
+        {
+          url: "/logo.png",
+          width: 500,
+          height: 363,
+          alt:
+            locale === "ar"
+              ? "سليم للوقاية والتطهير"
+              : "Salim Prévention et Désinfection",
+        },
+      ],
     },
     robots: {
       index: true,
@@ -104,14 +129,13 @@ export default async function LocaleLayout({
       addressCountry: "TN",
     },
     areaServed: [
-      "Tunis",
-      "Lac 1",
-      "Lac 2",
-      "Lac 3",
-      "Le Kram",
-      "La Marsa",
-      "Carthage",
-      "Ariana",
+      "Bizerte",
+      "Grand Tunis",
+      "Nabeul",
+      "Hammamet",
+      "Sousse",
+      "Monastir",
+      "Mahdia",
     ],
     priceRange: "$$",
     openingHoursSpecification: {
@@ -130,8 +154,19 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={loc} dir={dir} className={`${inter.variable} ${arabic.variable}`}>
-      <body className="flex min-h-screen flex-col bg-white text-ink-900 antialiased">
+    <html
+      lang={loc}
+      dir={dir}
+      className={`${display.variable} ${body.variable} ${arabic.variable}`}
+    >
+      <body className="flex min-h-screen flex-col bg-paper text-ink-900 antialiased">
+        <span
+          aria-hidden="true"
+          className="hidden"
+          dangerouslySetInnerHTML={{
+            __html: `<!-- RADE NOCTURNE direction contract (seed d29218b8): THESIS — protection as a lit harbor at night; the page reads night to dawn, pests own the dark, Salim owns the light, every surface offers call/WhatsApp/quote within one glance. OWN-WORLD — warm paper ground, deep sea-pine ink, one lantern-amber accent; Bricolage Grotesque display / Cairo Black Arabic voice; bento berths, ports-of-call ticker, totem phone numerals, one living WebGL harbor-light moment. STORY — a worried visitor understands in seconds, believes (real zones, steps, counts only), and acts (amber CTA always near). FIRST VIEWPORT — full-bleed night-graded photo plus WebGL shimmer plus horizon glow; start-aligned giant display title, amber primary action, call ghost, trust ticks, location line; no kicker above the heading. FORM — assigned direction 5 of the grounded list (safe harbor at dusk), raised by Deco thresholds, cue phases, totem numerals, living material. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance. -->`,
+          }}
+        />
         <a
           href="#contenu"
           className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white"

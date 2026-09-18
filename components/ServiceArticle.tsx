@@ -36,12 +36,11 @@ export function ServiceArticle({
       />
       <PageHero
         locale={locale}
-        eyebrow={name}
         title={data.heroTitle}
         subtitle={data.heroSub}
       />
 
-      <section className="bg-white">
+      <section className="bg-paper">
         <div className="mx-auto max-w-6xl px-4 pb-4 sm:px-6">
           <Reveal>
             <div className="max-w-3xl space-y-4 text-[17px] leading-relaxed text-ink-700">
@@ -52,7 +51,7 @@ export function ServiceArticle({
           </Reveal>
           {"note" in data && data.note && (
             <Reveal>
-              <p className="mt-6 max-w-3xl rounded-2xl border border-brand-200 bg-brand-50 px-5 py-4 text-[15px] font-medium leading-relaxed text-brand-800">
+              <p className="mt-6 max-w-3xl rounded-2xl border border-brand-300 bg-brand-50 px-5 py-4 text-[15px] font-semibold leading-relaxed text-brand-800">
                 {data.note}
               </p>
             </Reveal>
@@ -63,10 +62,10 @@ export function ServiceArticle({
       {data.blocks.map((block) => {
         const useChips = block.items.every((s) => s.length <= 28);
         return (
-          <section key={block.title} className="bg-white">
+          <section key={block.title} className="bg-paper">
             <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
               <Reveal>
-                <h2 className="text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
+                <h2 className="font-display text-2xl font-extrabold tracking-[-0.01em] text-ink-950 sm:text-3xl">
                   {block.title}
                 </h2>
               </Reveal>
@@ -75,7 +74,7 @@ export function ServiceArticle({
                   {block.items.map((item) => (
                     <li
                       key={item}
-                      className="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-[15px] font-semibold text-brand-800"
+                      className="rounded-full border border-brand-300 bg-brand-50 px-4 py-2 text-[15px] font-bold text-brand-800 transition-colors hover:bg-brand-100"
                     >
                       {item}
                     </li>
@@ -86,11 +85,11 @@ export function ServiceArticle({
                   {block.items.map((item) => (
                     <li
                       key={item}
-                      className="flex gap-3 rounded-2xl border border-ink-100 bg-ink-50/50 px-5 py-4 text-[15px] leading-relaxed text-ink-800"
+                      className="flex gap-3 rounded-2xl border border-ink-900/10 bg-white px-5 py-4 text-[15px] leading-relaxed text-ink-800"
                     >
                       <span
                         aria-hidden="true"
-                        className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-600"
+                        className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-500"
                       />
                       {item}
                     </li>
@@ -102,27 +101,28 @@ export function ServiceArticle({
         );
       })}
 
-      <section className="bg-ink-50/60">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <section className="grain bg-ink-950 text-white">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <Reveal>
-            <h2 className="text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
+            <h2 className="font-display text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-3xl">
+              <span aria-hidden="true" className="mb-4 block h-2 w-12 rounded-full bg-brand-400" />
               {data.stepsTitle}
             </h2>
           </Reveal>
           <ol className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {data.steps.map((step, i) => (
               <Reveal key={step.title} delay={Math.min(i * 80, 240)}>
-                <li className="h-full rounded-3xl border border-ink-100 bg-white p-6">
+                <li className="h-full rounded-[26px] border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm transition-colors duration-300 hover:border-brand-400/50">
                   <span
                     aria-hidden="true"
-                    className="text-4xl font-extrabold tracking-tight text-brand-200"
+                    className="font-display text-4xl font-extrabold tabular-nums tracking-tight text-brand-400"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-2 text-[17px] font-extrabold text-ink-950">
+                  <h3 className="mt-2 font-display text-[17px] font-extrabold text-white">
                     {step.title}
                   </h3>
-                  <p className="mt-1.5 text-[15px] leading-relaxed text-ink-600">
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-white/65">
                     {step.text}
                   </p>
                 </li>
@@ -133,17 +133,17 @@ export function ServiceArticle({
       </section>
 
       {"places" in data && data.places && (
-        <section className="bg-white">
+        <section className="bg-paper">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
             <Reveal>
-              <h2 className="text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
+              <h2 className="font-display text-2xl font-extrabold tracking-[-0.01em] text-ink-950 sm:text-3xl">
                 {data.placesTitle}
               </h2>
               <ul className="mt-5 flex flex-wrap gap-2.5">
                 {data.places.map((p) => (
                   <li
                     key={p}
-                    className="rounded-full bg-ink-900 px-4 py-2 text-[15px] font-semibold text-white"
+                    className="rounded-full bg-ink-950 px-4 py-2 text-[15px] font-bold text-white"
                   >
                     {p}
                   </li>
@@ -154,12 +154,12 @@ export function ServiceArticle({
         </section>
       )}
 
-      <section className="bg-white">
+      <section className="bg-paper">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
             <div>
               <Reveal>
-                <h2 className="text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
+                <h2 className="font-display text-2xl font-extrabold tracking-[-0.01em] text-ink-950 sm:text-3xl">
                   FAQ
                 </h2>
               </Reveal>
@@ -169,7 +169,7 @@ export function ServiceArticle({
             </div>
             <div>
               <Reveal>
-                <h2 className="text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
+                <h2 className="font-display text-2xl font-extrabold tracking-[-0.01em] text-ink-950 sm:text-3xl">
                   {locale === "ar" ? "خدمات أخرى" : "Autres services"}
                 </h2>
               </Reveal>
@@ -180,10 +180,10 @@ export function ServiceArticle({
                     <li key={s.slug}>
                       <a
                         href={`/${locale}/services/${s.slug}`}
-                        className="group flex items-center gap-4 rounded-2xl border border-ink-100 bg-white p-4 shadow-[0_2px_10px_rgba(11,21,26,0.04)] transition-all hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-[0_12px_30px_rgba(14,116,144,0.10)]"
+                        className="group flex items-center gap-4 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-[0_4px_16px_rgba(7,24,20,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400 hover:shadow-[0_16px_36px_rgba(7,24,20,0.12)]"
                       >
                         {Icon && (
-                          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ink-950 text-brand-300">
                             <Icon size={20} aria-hidden="true" />
                           </span>
                         )}
@@ -193,7 +193,7 @@ export function ServiceArticle({
                         <ArrowRight
                           size={17}
                           aria-hidden="true"
-                          className={`text-brand-700 transition-transform group-hover:translate-x-0.5 ${isRtl ? "rotate-180" : ""}`}
+                          className={`text-brand-700 transition-transform duration-300 group-hover:translate-x-0.5 ${isRtl ? "rotate-180" : ""}`}
                         />
                       </a>
                     </li>

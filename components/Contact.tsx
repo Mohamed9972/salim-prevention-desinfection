@@ -6,18 +6,17 @@ import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import {
   ADDRESS_FR,
-  EMAIL,
-  EMAIL_HREF,
   PHONE_DISPLAY,
   PHONE_TEL,
   WHATSAPP_BASE,
 } from "@/lib/site";
 import { buildQuoteMessage } from "@/lib/whatsapp";
 import { Reveal } from "./Reveal";
+import { EmailLink } from "./EmailLink";
 import { SectionHeading } from "./SectionHeading";
 
 const inputCls =
-  "w-full rounded-2xl border border-ink-200 bg-white px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-600 transition-colors focus:border-brand-500 focus:outline-none";
+  "w-full rounded-2xl border border-ink-900/15 bg-white px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-500 transition-colors focus:border-brand-500 focus:outline-none";
 const labelCls = "mb-1.5 block text-sm font-bold text-ink-800";
 const errCls = "mt-1.5 text-[13px] font-medium text-red-700";
 
@@ -50,10 +49,9 @@ export function Contact({ locale }: { locale: Locale }) {
     : WHATSAPP_BASE;
 
   return (
-    <section id="contact" className="scroll-mt-20 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+    <section id="contact" className="scroll-mt-20 bg-paper">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
         <SectionHeading
-          eyebrow={t.contact.eyebrow}
           title={t.contact.title}
           subtitle={t.contact.subtitle}
         />
@@ -74,7 +72,7 @@ export function Contact({ locale }: { locale: Locale }) {
                 }
                 window.open(waHref, "_blank", "noopener,noreferrer");
               }}
-              className="rounded-3xl border border-ink-100 bg-ink-50/50 p-6 sm:p-8"
+              className="rounded-[26px] border border-ink-900/10 bg-white p-6 shadow-[0_20px_50px_rgba(7,24,20,0.08)] sm:p-8"
               aria-label={t.contact.title}
             >
               <div className="grid gap-5 sm:grid-cols-2">
@@ -176,7 +174,7 @@ export function Contact({ locale }: { locale: Locale }) {
               <div className="mt-6 flex flex-col gap-3">
                 <button
                   type="submit"
-                  className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800 active:translate-y-0 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+                  className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_10px_30px_rgba(224,142,11,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
                 >
                   <MessageCircle size={19} aria-hidden="true" />
                   {touched && !valid ? f.viaWhatsapp : f.submit}
@@ -204,7 +202,7 @@ export function Contact({ locale }: { locale: Locale }) {
                   href={PHONE_TEL}
                   className="flex items-center gap-4 rounded-2xl bg-white/[0.07] p-4 ring-1 ring-white/10 transition-colors hover:bg-white/[0.12]"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-500 text-white">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-400 text-ink-950">
                     <Phone size={21} aria-hidden="true" />
                   </span>
                   <span>
@@ -226,18 +224,14 @@ export function Contact({ locale }: { locale: Locale }) {
                     <span dir="ltr" className="block text-lg font-extrabold">{PHONE_DISPLAY}</span>
                   </span>
                 </a>
-                <a
-                  href={EMAIL_HREF}
-                  className="flex items-center gap-4 rounded-2xl bg-white/[0.07] p-4 ring-1 ring-white/10 transition-colors hover:bg-white/[0.12]"
-                >
+                <EmailLink className="flex items-center gap-4 rounded-2xl bg-white/[0.07] p-4 ring-1 ring-white/10 transition-colors hover:bg-white/[0.12]" addressClassName="block truncate text-[15px] font-bold">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-white">
                     <Mail size={21} aria-hidden="true" />
                   </span>
                   <span className="min-w-0">
                     <span className="block text-[13px] font-medium text-white/65">{t.contact.direct.email}</span>
-                    <span className="block truncate text-[15px] font-bold" dir="ltr">{EMAIL}</span>
                   </span>
-                </a>
+                </EmailLink>
                 <div className="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-4 ring-1 ring-white/10">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-white">
                     <MapPin size={21} aria-hidden="true" />

@@ -2,28 +2,35 @@ import { ArrowRight, MapPin } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { Reveal } from "./Reveal";
+import { SectionHeading } from "./SectionHeading";
 
+/** Night-signal band: the worry, stated large, with the way out beside it. */
 export function ProblemBand({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   const isRtl = locale === "ar";
   return (
-    <section aria-label={t.home.problem.title} className="bg-ink-900 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-5 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between md:py-14">
-        <Reveal>
-          <h2 className="max-w-xl text-balance text-2xl font-extrabold tracking-tight sm:text-3xl">
+    <section aria-label={t.home.problem.title} className="grain bg-ink-950 text-white">
+      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-4 py-16 sm:px-6 md:flex-row md:items-center md:justify-between md:py-24">
+        <Reveal className="max-w-2xl">
+          <h2 className="text-balance font-display text-3xl font-extrabold leading-[1.08] tracking-[-0.015em] sm:text-5xl">
+            <span aria-hidden="true" className="mb-4 block h-2 w-12 rounded-full bg-brand-400" />
             {t.home.problem.title}
           </h2>
-          <p className="mt-2 max-w-xl text-pretty text-[16px] leading-relaxed text-white/75">
+          <p className="mt-4 max-w-xl text-pretty text-[17px] leading-relaxed text-white/70">
             {t.home.problem.text}
           </p>
         </Reveal>
-        <Reveal delay={100}>
+        <Reveal delay={120}>
           <a
             href={`/${locale}/contact`}
-            className="inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-2xl bg-white px-7 text-base font-bold text-ink-900 transition-all hover:-translate-y-0.5 hover:bg-brand-50"
+            className="group inline-flex min-h-[56px] shrink-0 items-center justify-center gap-2 rounded-2xl bg-brand-400 px-9 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(231,158,34,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98]"
           >
             {t.home.problem.cta}
-            <ArrowRight size={18} aria-hidden="true" className={isRtl ? "rotate-180" : ""} />
+            <ArrowRight
+              size={18}
+              aria-hidden="true"
+              className={`transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? "rotate-180 group-hover:-translate-x-1" : ""}`}
+            />
           </a>
         </Reveal>
       </div>
@@ -31,29 +38,23 @@ export function ProblemBand({ locale }: { locale: Locale }) {
   );
 }
 
+/** Ports of call: every zone the crew sails to, then the full chart. */
 export function AreasPreview({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   const isRtl = locale === "ar";
   const short = t.areas.list.slice(0, 6);
   return (
-    <section aria-label={t.home.areas.title} className="border-y border-ink-100 bg-ink-50/60">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+    <section aria-label={t.home.areas.title} className="border-y border-ink-900/10 bg-paper-deep">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+        <SectionHeading title={t.home.areas.title} />
         <Reveal>
-          <p className="text-[13px] font-bold uppercase tracking-wider text-brand-700">
-            {t.home.areas.eyebrow}
-          </p>
-          <h2 className="mt-2 max-w-2xl text-balance text-2xl font-extrabold tracking-tight text-ink-950 sm:text-3xl">
-            {t.home.areas.title}
-          </h2>
-        </Reveal>
-        <Reveal>
-          <ul className="mt-6 flex flex-wrap gap-2.5">
+          <ul className="mt-8 flex flex-wrap gap-2.5">
             {short.map((z) => (
               <li
                 key={z}
-                className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-white px-4 py-2 text-[15px] font-semibold text-brand-800"
+                className="inline-flex items-center gap-2 rounded-full border border-ink-900/15 bg-paper px-5 py-2.5 text-[15px] font-bold text-ink-900 transition-colors duration-300 hover:border-brand-500 hover:bg-brand-50"
               >
-                <MapPin size={15} aria-hidden="true" />
+                <MapPin size={15} aria-hidden="true" className="text-brand-600" />
                 {z}
               </li>
             ))}
@@ -62,7 +63,7 @@ export function AreasPreview({ locale }: { locale: Locale }) {
         <Reveal>
           <a
             href={`/${locale}/zones-intervention`}
-            className="group mt-6 inline-flex items-center gap-1.5 text-[15px] font-bold text-brand-700 hover:text-brand-800"
+            className="group mt-8 inline-flex items-center gap-1.5 text-[15px] font-bold text-brand-700 transition-colors hover:text-brand-600"
           >
             {t.home.areas.cta}
             <ArrowRight size={16} aria-hidden="true" className={isRtl ? "rotate-180" : ""} />

@@ -22,10 +22,9 @@ const REVIEW_POSTS = [
 export function ReviewsSection({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   return (
-    <section aria-label={t.reviews.title} className="bg-ink-50/60">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+    <section aria-label={t.reviews.title} className="bg-paper-deep">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
         <SectionHeading
-          eyebrow={t.reviews.eyebrow}
           title={t.reviews.title}
           subtitle={t.reviews.subtitle}
           align="center"
@@ -34,8 +33,8 @@ export function ReviewsSection({ locale }: { locale: Locale }) {
           {REVIEW_POSTS.map((post, i) => (
             <Reveal key={post.watch} delay={Math.min(i * 120, 240)}>
               <figure className="flex flex-col items-center">
-                <div className="overflow-hidden rounded-[24px] border border-ink-100 bg-white shadow-[0_16px_44px_rgba(11,21,26,0.10)]">
-                  <p className="border-b border-ink-100 px-5 py-3 text-[13px] font-semibold text-ink-600">
+                <div className="overflow-hidden rounded-[24px] border border-ink-900/10 bg-white shadow-[0_20px_50px_rgba(7,24,20,0.12)]">
+                  <p className="border-b border-ink-900/10 bg-ink-950 px-5 py-3 text-[13px] font-bold tracking-wide text-brand-300">
                     Facebook
                   </p>
                   <iframe
@@ -55,7 +54,7 @@ export function ReviewsSection({ locale }: { locale: Locale }) {
                     href={post.watch}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:text-brand-800"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 transition-colors hover:text-brand-600"
                   >
                     <ExternalLink size={15} aria-hidden="true" />
                     {t.reviews.watchOn}

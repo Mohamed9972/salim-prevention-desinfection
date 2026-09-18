@@ -29,11 +29,10 @@ export default async function ServicesPage({ params }: Props) {
       />
       <PageHero
         locale={locale}
-        eyebrow={t.hub.eyebrow}
         title={t.hub.title}
         subtitle={t.hub.intro}
       />
-      <section className="bg-white">
+      <section className="bg-paper">
         <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
           <ServicesGrid locale={locale} variant="hub" />
         </div>

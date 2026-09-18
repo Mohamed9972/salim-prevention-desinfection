@@ -29,7 +29,7 @@ export function LanguageSwitcher({
   const wrap =
     variant === "dark"
       ? "border-white/15 bg-white/10"
-      : "border-ink-200 bg-white";
+      : "border-ink-900/15 bg-white";
 
   return (
     <div
@@ -37,15 +37,15 @@ export function LanguageSwitcher({
       role="group"
       aria-label={locale === "ar" ? "اللغة" : "Langue"}
     >
-      {(["fr", "ar"] as Locale[]).map((l) =>
+      {(["ar", "fr"] as Locale[]).map((l) =>
         l === locale ? (
           <span
             key={l}
             aria-current="true"
             className={
               variant === "dark"
-                ? "rounded-full bg-white px-3 py-2 text-ink-900"
-                : "rounded-full bg-ink-900 px-3 py-2 text-white"
+                ? "rounded-full bg-white px-3 py-2 text-ink-950"
+                : "rounded-full bg-ink-950 px-3 py-2 text-white"
             }
           >
             {localeNames[l]}

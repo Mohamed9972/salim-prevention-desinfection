@@ -9,14 +9,14 @@ export function MobileCta({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-100 bg-white/97 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-900/10 bg-paper/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
       role="navigation"
       aria-label={locale === "ar" ? "اتصال سريع" : "Contact rapide"}
     >
       <div className="grid grid-cols-2 gap-2.5 p-3">
         <a
           href={PHONE_TEL}
-          className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-2xl bg-ink-900 text-[15px] font-bold text-white active:scale-[0.98]"
+          className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-2xl bg-ink-950 text-[15px] font-bold text-white active:scale-[0.98]"
         >
           <Phone size={18} aria-hidden="true" />
           {t.mobileCta.call} · <span dir="ltr" className="tracking-wide tabular-nums">{PHONE_DISPLAY}</span>

@@ -31,6 +31,7 @@ export const fr = {
     cardItems: [
       "Cafards & fourmis",
       "Punaises de lit",
+      "Puces",
       "Rats & souris",
       "Moustiques & mouches",
     ],
@@ -185,7 +186,6 @@ export const fr = {
     frames: [
       "Intervention sur le terrain — vidéo Facebook 1",
       "Intervention sur le terrain — vidéo Facebook 2",
-      "Intervention sur le terrain — vidéo Facebook 3",
     ],
   },
   why: {
@@ -216,16 +216,15 @@ export const fr = {
     eyebrow: "Zone d'intervention",
     title: "Nos zones d'intervention",
     subtitle:
-      "Basés au Lac 3 à Tunis, nous intervenons principalement dans le Grand Tunis.",
+      "Basés à Tunis, nous intervenons de Bizerte à Mahdia.",
     list: [
-      "Tunis",
-      "Lac 1",
-      "Lac 2",
-      "Lac 3",
-      "Le Kram",
-      "La Marsa",
-      "Carthage",
-      "Ariana",
+      "Bizerte",
+      "Grand Tunis",
+      "Nabeul",
+      "Hammamet",
+      "Sousse",
+      "Monastir",
+      "Mahdia",
     ],
     note: "Contactez-nous pour vérifier la disponibilité de notre équipe dans votre zone.",
     cta: "Vérifier ma zone",
@@ -246,6 +245,7 @@ export const fr = {
         "Cafards",
         "Fourmis",
         "Punaises de lit",
+        "Puces",
         "Moustiques / mouches",
         "Rats / souris",
         "Araignées / lézards / serpents",
@@ -255,7 +255,7 @@ export const fr = {
       place: "Type de local",
       placeOptions: ["Maison / appartement", "Commerce / bureau", "Restaurant / établissement", "Immeuble / parties communes", "Autre"],
       address: "Adresse / zone",
-      addressPh: "Ex. Lac 2, La Marsa…",
+      addressPh: "Ex. Bizerte, Sousse…",
       message: "Message",
       messagePh: "Décrivez le problème : où, depuis quand, surface approximative…",
       submit: "Demander une intervention",
@@ -350,6 +350,7 @@ export const fr = {
     { slug: "punaises-de-lit", name: "Punaises de lit" },
     { slug: "desinfection", name: "Désinfection" },
     { slug: "traitement-nuisibles", name: "Traitement des nuisibles" },
+    { slug: "puces", name: "Traitement des puces" },
   ],
   home: {
     hero: {
@@ -364,7 +365,7 @@ export const fr = {
       eyebrow: "Nos services",
       title: "Nos services",
       subtitle:
-        "Cinq pôles d'intervention pour les maisons comme pour les locaux professionnels.",
+        "Six pôles d'intervention pour les maisons comme pour les locaux professionnels.",
       more: "En savoir plus",
       all: "Voir tous les services",
     },
@@ -375,7 +376,7 @@ export const fr = {
     },
     areas: {
       eyebrow: "Zones d'intervention",
-      title: "Nous intervenons dans plusieurs zones du Grand Tunis",
+      title: "Nous intervenons de Bizerte à Mahdia",
       cta: "Voir toutes les zones",
     },
   },
@@ -383,7 +384,7 @@ export const fr = {
     eyebrow: "Nos services",
     title: "Nos services de lutte contre les nuisibles",
     intro:
-      "Cinq domaines d'intervention, une même exigence : évaluer avant de traiter. Choisissez un service pour le détail.",
+      "Six domaines d'intervention, une même exigence : évaluer avant de traiter. Choisissez un service pour le détail.",
     more: "En savoir plus",
     items: [
       {
@@ -410,6 +411,11 @@ export const fr = {
         slug: "traitement-nuisibles",
         desc: "Prise en charge des autres nuisibles selon la situation rencontrée.",
         points: ["Araignées", "Lézards", "Serpents"],
+      },
+      {
+        slug: "puces",
+        desc: "Diagnostic et traitement efficace contre les puces, avec des conseils pour limiter leur réapparition.",
+        points: ["Tapis & tissus", "Literie", "Animaux domestiques"],
       },
     ],
   },
@@ -713,6 +719,88 @@ export const fr = {
       ],
       ctaTitle: "Un nuisible inhabituel ?",
     },
+    puces: {
+      heroTitle: "Traitement des puces à Tunis et ses environs",
+      heroSub:
+        "Diagnostic et traitement efficace contre les puces, avec des conseils pour limiter leur réapparition.",
+      intro: [
+        "Les puces sont de petits insectes piqueurs qui s'installent dans les tapis, les moquettes, la literie et les tissus d'ameublement. Elles piquent les humains comme les animaux domestiques et se multiplient très vite.",
+        "Leurs œufs tombent dans l'environnement et éclosent en plusieurs vagues : sans traitement complet des lieux, l'infestation repart. Nous traitons l'ensemble des zones concernées et vous indiquons les mesures préventives à adopter.",
+      ],
+      blocks: [
+        {
+          title: "Où se cachent les puces ?",
+          items: [
+            "Tapis, moquettes et parquets",
+            "Literie, canapés et coussins",
+            "Paniers et couchages des animaux",
+            "Fissures, plinthes et recoins sombres",
+          ],
+        },
+        {
+          title: "Signes d'infestation",
+          items: [
+            "Piqûres regroupées, souvent sur les jambes",
+            "Démangeaisons persistantes",
+            "Petits insectes sombres et sauteurs dans les tissus",
+            "Présence accrue autour des animaux domestiques",
+          ],
+        },
+        {
+          title: "Pourquoi agir vite ?",
+          items: [
+            "Piqûres et inconfort au quotidien",
+            "Multiplication rapide en quelques semaines",
+            "Œufs disséminés dans tout le logement",
+          ],
+        },
+        {
+          title: "Que préparer avant l'intervention ?",
+          items: [
+            "Passez l'aspirateur sur tapis et tissus, puis jetez le sac",
+            "Lavez le linge et les housses à haute température quand c'est possible",
+            "Traitez ou faites contrôler vos animaux par un vétérinaire",
+            "Dégagez l'accès aux zones concernées",
+          ],
+        },
+      ],
+      stepsTitle: "Comment se déroule une intervention professionnelle ?",
+      steps: [
+        {
+          title: "Inspection",
+          text: "Repérage des zones d'activité : tapis, literie, tissus et recoins.",
+        },
+        {
+          title: "Traitement complet",
+          text: "Traitement de l'ensemble des zones identifiées, y compris les œufs et les cachettes.",
+        },
+        {
+          title: "Contrôle et suivi",
+          text: "Selon la situation, un contrôle ou un second passage peut être recommandé.",
+        },
+        {
+          title: "Prévention",
+          text: "Conseils pour limiter leur réapparition, notamment autour des animaux domestiques.",
+        },
+      ],
+      placesTitle: "Pour quels locaux ?",
+      places: ["Maisons", "Appartements", "Bureaux", "Commerces", "Locaux professionnels"],
+      faq: [
+        {
+          q: "Je n'ai pas d'animaux, puis-je avoir des puces ?",
+          a: "Oui : les puces voyagent sur les vêtements, les bagages ou via le passage d'un animal. Décrivez ce que vous avez constaté, nous évaluons la situation.",
+        },
+        {
+          q: "Faut-il traiter les animaux domestiques ?",
+          a: "Oui, en parallèle du traitement des lieux : consultez votre vétérinaire pour le traitement adapté à l'animal pendant que nous traitons l'environnement.",
+        },
+        {
+          q: "Combien de passages sont nécessaires ?",
+          a: "Cela dépend du niveau d'infestation et de la configuration des lieux, car les œufs éclosent en plusieurs vagues. Nous vous l'indiquons clairement lors de l'évaluation.",
+        },
+      ],
+      ctaTitle: "Un problème de puces ?",
+    },
   },
   aboutPage: {
     heroTitle: "À propos de Salim — Prévention et Désinfection",
@@ -745,18 +833,17 @@ export const fr = {
   zonesPage: {
     heroTitle: "Zones d'intervention",
     heroSub:
-      "Basés au Lac 3 à Tunis, nous intervenons principalement dans le Grand Tunis.",
+      "Basés à Tunis, nous intervenons de Bizerte à Mahdia.",
     note: "Vous êtes dans une autre zone ? Contactez-nous pour vérifier la disponibilité de notre équipe.",
     relatedTitle: "Nos services dans votre zone",
     zones: [
-      { name: "Tunis", desc: "Centre-ville et quartiers, selon disponibilité de l'équipe." },
-      { name: "Lac 1", desc: "Résidences, bureaux et commerces du Lac 1." },
-      { name: "Lac 2", desc: "Résidences, bureaux et commerces du Lac 2." },
-      { name: "Lac 3", desc: "Notre zone d'ancrage : interventions rapides." },
-      { name: "Le Kram", desc: "Logements et locaux professionnels." },
-      { name: "La Marsa", desc: "Villas, appartements et commerces." },
-      { name: "Carthage", desc: "Logements et locaux professionnels." },
-      { name: "Ariana", desc: "Logements et locaux professionnels." },
+      { name: "Bizerte", desc: "Bizerte et environs, selon disponibilité de l'équipe." },
+      { name: "Grand Tunis", desc: "Tunis, Ariana, Ben Arous et Manouba : notre zone d'ancrage." },
+      { name: "Nabeul", desc: "Nabeul et le Cap Bon, logements et locaux professionnels." },
+      { name: "Hammamet", desc: "Villas, résidences et établissements touristiques." },
+      { name: "Sousse", desc: "Logements, commerces et locaux professionnels." },
+      { name: "Monastir", desc: "Logements et locaux professionnels." },
+      { name: "Mahdia", desc: "Mahdia et environs, selon disponibilité de l'équipe." },
     ],
   },
   faqPage: {
@@ -796,7 +883,7 @@ export const fr = {
     },
     desinsectisation: {
       title: "Désinsectisation en Tunisie | شركة سليم",
-      desc: "Traitement professionnel des cafards, fourmis, moustiques et termites à Tunis (Lac, Marsa, Kram, Ariana). Appelez le 50 431 208.",
+      desc: "Traitement professionnel des cafards, fourmis, moustiques et termites de Bizerte à Mahdia (Grand Tunis, Cap Bon, Sahel). Appelez le 50 431 208.",
     },
     deratisation: {
       title: "Dératisation à Tunis | شركة سليم",
@@ -814,13 +901,17 @@ export const fr = {
       title: "Traitement des nuisibles à Tunis | Salim",
       desc: "Araignées, lézards, serpents et autres nuisibles : décrivez la situation, nous proposons la solution adaptée. 50 431 208.",
     },
+    puces: {
+      title: "Traitement des puces à Tunis | Salim",
+      desc: "Puces dans les tapis ou la literie ? Diagnostic et traitement professionnel contre les puces à Tunis, avec conseils préventifs. 50 431 208.",
+    },
     apropos: {
       title: "À propos | Salim Prévention et Désinfection",
       desc: "Salim : prévention, traitement des nuisibles, désinfection et dératisation à Tunis. Découvrez notre approche.",
     },
     zones: {
       title: "Zones d'intervention à Tunis | Salim",
-      desc: "Nous intervenons à Tunis, Lac 1, Lac 2, Lac 3, Le Kram, La Marsa, Carthage et Ariana. Vérifiez la disponibilité : 50 431 208.",
+      desc: "Nous intervenons à Bizerte, dans le Grand Tunis, à Nabeul, Hammamet, Sousse, Monastir et Mahdia. Vérifiez la disponibilité : 50 431 208.",
     },
     faq: {
       title: "Questions fréquentes | Salim Prévention et Désinfection",
@@ -834,7 +925,7 @@ export const fr = {
   meta: {
     title: "Désinsectisation & dératisation à Tunis | Salim Prévention et Désinfection",
     description:
-      "Désinsectisation, dératisation, traitement des punaises de lit et cafards, désinfection à Tunis (Lac 1, Lac 2, Lac 3, Marsa, Kram, Ariana). Appelez le 50 431 208.",
+      "Désinsectisation, dératisation, traitement des punaises de lit et cafards, désinfection de Bizerte à Mahdia. Appelez le 50 431 208.",
   },
 };
 
@@ -863,6 +954,7 @@ export const ar: Dictionary = {
     cardItems: [
       "الصراصير والنمل",
       "بق الفراش",
+      "البراغيث",
       "الجرذان والفئران",
       "الناموس والذباب",
     ],
@@ -1010,7 +1102,6 @@ export const ar: Dictionary = {
     frames: [
       "تدخل ميداني — فيديو فيسبوك 1",
       "تدخل ميداني — فيسبوك 2",
-      "تدخل ميداني — فيسبوك 3",
     ],
   },
   why: {
@@ -1039,16 +1130,15 @@ export const ar: Dictionary = {
   areas: {
     eyebrow: "منطقة التدخل",
     title: "مناطق التدخل متاعنا",
-    subtitle: "مقرنا في البحيرة 3 بتونس، ونتدخلو أساساً في تونس الكبرى.",
+    subtitle: "مقرنا في تونس، ونتدخلو من بنزرت حتى للمهدية.",
     list: [
-      "تونس",
-      "البحيرة 1",
-      "البحيرة 2",
-      "البحيرة 3",
-      "الكرم",
-      "المرسى",
-      "قرطاج",
-      "أريانة",
+      "بنزرت",
+      "تونس الكبرى",
+      "نابل",
+      "الحمامات",
+      "سوسة",
+      "المنستير",
+      "المهدية",
     ],
     note: "اتصل بينا باش تثبت من توفر الفريق في المنطقة متاعك.",
     cta: "ثبت المنطقة متاعك",
@@ -1069,6 +1159,7 @@ export const ar: Dictionary = {
         "صراصير",
         "نمل",
         "بق الفراش",
+        "براغيث",
         "ناموس / ذباب",
         "جرذان / فئران",
         "عناكب / سحالي / أفاعي",
@@ -1078,7 +1169,7 @@ export const ar: Dictionary = {
       place: "نوع المكان",
       placeOptions: ["دار / شقة", "محل / مكتب", "مطعم / مؤسسة", "عمارة / أجزاء مشتركة", "نوع آخر"],
       address: "العنوان / المنطقة",
-      addressPh: "مثال: البحيرة 2، المرسى…",
+      addressPh: "مثال: بنزرت، سوسة…",
       message: "الرسالة",
       messagePh: "أوصف المشكلة: وين، من وقتاش، المساحة التقريبية…",
       submit: "اطلب تدخلاً الآن",
@@ -1172,10 +1263,11 @@ export const ar: Dictionary = {
     { slug: "punaises-de-lit", name: "بق الفراش" },
     { slug: "desinfection", name: "التطهير والتعقيم" },
     { slug: "traitement-nuisibles", name: "معالجة الآفات" },
+    { slug: "puces", name: "مكافحة البراغيث" },
   ],
   home: {
     hero: {
-      badge: "تدخل مهني في تونس الكبرى",
+      badge: "تدخل مهني من بنزرت للمهدية",
       title: "حلّك المهني ضد الحشرات والآفات",
       subtitle: "مكافحة الحشرات والقوارض والتطهير ومعالجة الآفات في تونس.",
       primary: "اطلب تدخلاً الآن",
@@ -1184,7 +1276,7 @@ export const ar: Dictionary = {
     preview: {
       eyebrow: "خدماتنا",
       title: "خدماتنا",
-      subtitle: "خمسة مجالات تدخل للديار كما للمحلات المهنية.",
+      subtitle: "ستة مجالات تدخل للديار كما للمحلات المهنية.",
       more: "اكتشف المزيد",
       all: "شوف الخدمات الكل",
     },
@@ -1195,7 +1287,7 @@ export const ar: Dictionary = {
     },
     areas: {
       eyebrow: "مناطق التدخل",
-      title: "نتدخلو في برشا مناطق في تونس الكبرى",
+      title: "نتدخلو من بنزرت حتى للمهدية",
       cta: "شوف مناطق التدخل الكل",
     },
   },
@@ -1203,7 +1295,7 @@ export const ar: Dictionary = {
     eyebrow: "خدماتنا",
     title: "خدماتنا في مكافحة الحشرات والآفات",
     intro:
-      "خمسة مجالات تدخل بنفس القاعدة: نقيّمو قبل ما نعالجو. اختار خدمة باش تشوف التفاصيل.",
+      "ستة مجالات تدخل بنفس القاعدة: نقيّمو قبل ما نعالجو. اختار خدمة باش تشوف التفاصيل.",
     more: "اكتشف المزيد",
     items: [
       {
@@ -1230,6 +1322,11 @@ export const ar: Dictionary = {
         slug: "traitement-nuisibles",
         desc: "التعامل مع الآفات الأخرى حسب الوضعية.",
         points: ["العناكب", "السحالي", "الأفاعي"],
+      },
+      {
+        slug: "puces",
+        desc: "تشخيص ومعالجة فعّالة ضد البراغيث، مع نصائح للحدّ من عودتها.",
+        points: ["الزرابي والأقمشة", "الفرش", "الحيوانات الأليفة"],
       },
     ],
   },
@@ -1529,6 +1626,87 @@ export const ar: Dictionary = {
       ],
       ctaTitle: "آفة غير معتادة؟",
     },
+    puces: {
+      heroTitle: "مكافحة البراغيث في تونس والمناطق المجاورة",
+      heroSub: "تشخيص ومعالجة فعّالة ضد البراغيث، مع نصائح للحدّ من عودتها.",
+      intro: [
+        "البراغيث حشرات صغيرة تقرص الإنسان والحيوانات الأليفة وتستقر في الزرابي والموكيت والفرش والأقمشة. تتكاثر بسرعة وتنتشر في كامل المسكن.",
+        "بيضها يتساقط في المحيط ويفقس على دفعات: من غير معالجة كاملة للمكان، الإصابة ترجع. نعالجو كل المناطق المعنية ونوضحو لك الإجراءات الوقائية، خاصة حول الحيوانات الأليفة.",
+      ],
+      blocks: [
+        {
+          title: "وين تتخبى البراغيث؟",
+          items: [
+            "الزرابي والموكيت والباركي",
+            "الفرش والكنبيات والمخادد",
+            "فرش ورقاد الحيوانات",
+            "الشقوق والحواف والزوايا المظلمة",
+          ],
+        },
+        {
+          title: "علامات الإصابة",
+          items: [
+            "قرصات متقاربة خاصة في الساقين",
+            "حكة متواصلة",
+            "حشرات صغيرة داكنة تنقز في الأقمشة",
+            "وجود مكثف حول الحيوانات الأليفة",
+          ],
+        },
+        {
+          title: "علاش لازم تتحرك بسرعة؟",
+          items: [
+            "قرص وإزعاج يومي",
+            "تكاثر سريع في أسابيع",
+            "بيض منتشر في كامل المسكن",
+          ],
+        },
+        {
+          title: "شنوّا تحضّر قبل التدخل؟",
+          items: [
+            "نظف الزرابي والأقمشة بالمكنسة الكهربائية ولوّح الكيس",
+            "اغسل الأغطية والأغلفة بالماء الساخن إذا أمكن",
+            "عالج الحيوانات متاعك ولا هزها للبيطري",
+            "فرّغ الطريق للمناطق المعنية",
+          ],
+        },
+      ],
+      stepsTitle: "كيفاش يتم التدخل المهني؟",
+      steps: [
+        {
+          title: "المعاينة",
+          text: "نكشفو مناطق النشاط: الزرابي والفرش والأقمشة والزوايا.",
+        },
+        {
+          title: "معالجة كاملة",
+          text: "نعالجو كل المناطق المحددة، بما فيها البيض والمخابئ.",
+        },
+        {
+          title: "مراقبة ومتابعة",
+          text: "حسب الوضعية، نجم نقترحو مراقبة أو تدخل ثانٍ.",
+        },
+        {
+          title: "الوقاية",
+          text: "نصائح باش تحدّ من رجوعها، خاصة حول الحيوانات الأليفة.",
+        },
+      ],
+      placesTitle: "لأي أماكن؟",
+      places: ["الديار", "الشقق", "المكاتب", "المحلات", "الفضاءات المهنية"],
+      faq: [
+        {
+          q: "ما عنديش حيوانات، نجم يكون عندي براغيث؟",
+          a: "أي: البراغيث تتنقل على الحوايج والفاليزات ولا عبر مرور حيوان. أوصف اللي لاحظتو ونقيّمو الوضعية.",
+        },
+        {
+          q: "لازم نعالج الحيوانات الأليفة؟",
+          a: "أي، بالتوازي مع معالجة المكان: استشير البيطري للمعالجة المناسبة للحيوان وقت اللي نعالجو المحيط.",
+        },
+        {
+          q: "قداش من تدخل لازم؟",
+          a: "يعتمد على درجة الإصابة وخصوصية المكان، خاطر البيض يفقس على دفعات. نوضحو لك هذا من وقت التقييم.",
+        },
+      ],
+      ctaTitle: "عندك مشكلة براغيث؟",
+    },
   },
   aboutPage: {
     heroTitle: "من نحن — سليم للوقاية والتطهير",
@@ -1559,18 +1737,17 @@ export const ar: Dictionary = {
   },
   zonesPage: {
     heroTitle: "مناطق التدخل",
-    heroSub: "مقرنا في البحيرة 3 بتونس، ونتدخلو أساساً في تونس الكبرى.",
+    heroSub: "مقرنا في تونس، ونتدخلو من بنزرت حتى للمهدية.",
     note: "في منطقة أخرى؟ اتصل بينا باش تثبت من توفر الفريق.",
     relatedTitle: "خدماتنا في منطقتك",
     zones: [
-      { name: "تونس", desc: "وسط المدينة والأحياء، حسب توفر الفريق." },
-      { name: "البحيرة 1", desc: "إقامات ومكاتب ومحلات البحيرة 1." },
-      { name: "البحيرة 2", desc: "إقامات ومكاتب ومحلات البحيرة 2." },
-      { name: "البحيرة 3", desc: "منطقة مقرنا: تدخل سريع." },
-      { name: "الكرم", desc: "ديار وفضاءات مهنية." },
-      { name: "المرسى", desc: "فيلات وشقق ومحلات." },
-      { name: "قرطاج", desc: "ديار وفضاءات مهنية." },
-      { name: "أريانة", desc: "ديار وفضاءات مهنية." },
+      { name: "بنزرت", desc: "بنزرت والمناطق المجاورة، حسب توفر الفريق." },
+      { name: "تونس الكبرى", desc: "تونس وأريانة وبن عروس ومنوبة: منطقة تمركزنا." },
+      { name: "نابل", desc: "نابل والوطن القبلي: ديار وفضاءات مهنية." },
+      { name: "الحمامات", desc: "فيلات وإقامات ومؤسسات سياحية." },
+      { name: "سوسة", desc: "ديار ومحلات وفضاءات مهنية." },
+      { name: "المنستير", desc: "ديار وفضاءات مهنية." },
+      { name: "المهدية", desc: "المهدية والمناطق المجاورة، حسب توفر الفريق." },
     ],
   },
   faqPage: {
@@ -1608,7 +1785,7 @@ export const ar: Dictionary = {
     },
     desinsectisation: {
       title: "مكافحة الحشرات في تونس | شركة سليم",
-      desc: "معالجة مهنية للصراصير والنمل والناموس والنمل الأبيض في تونس (البحيرة، المرسى، الكرم، أريانة). اتصل على 50 431 208.",
+      desc: "معالجة مهنية للصراصير والنمل والناموس والنمل الأبيض من بنزرت للمهدية (تونس الكبرى، الوطن القبلي، الساحل). اتصل على 50 431 208.",
     },
     deratisation: {
       title: "مكافحة القوارض في تونس | شركة سليم",
@@ -1626,13 +1803,17 @@ export const ar: Dictionary = {
       title: "معالجة الآفات في تونس | سليم",
       desc: "عناكب وسحالي وأفاعي وآفات أخرى: أوصف الوضعية ونقترحو الحل المناسب. 50 431 208.",
     },
+    puces: {
+      title: "مكافحة البراغيث في تونس | سليم",
+      desc: "براغيث في الزرابي ولا الفرش؟ تشخيص ومعالجة مهنية للبراغيث في تونس مع نصائح وقائية. اتصل على 50 431 208.",
+    },
     apropos: {
       title: "من نحن | سليم للوقاية والتطهير",
       desc: "سليم: وقاية ومعالجة الحشرات والتطهير ومكافحة القوارض في تونس. اكتشف الطريقة متاعنا.",
     },
     zones: {
       title: "مناطق التدخل في تونس | سليم",
-      desc: "نتدخلو في تونس، البحيرة 1 و2 و3، الكرم، المرسى، قرطاج وأريانة. ثبت التوفر: 50 431 208.",
+      desc: "نتدخلو في بنزرت وتونس الكبرى ونابل والحمامات وسوسة والمنستير والمهدية. ثبت التوفر: 50 431 208.",
     },
     faq: {
       title: "الأسئلة الشائعة | سليم للوقاية والتطهير",
@@ -1646,7 +1827,7 @@ export const ar: Dictionary = {
   meta: {
     title: "مكافحة الحشرات والتطهير في تونس | شركة سليم للوقاية والتطهير",
     description:
-      "مكافحة الحشرات والقوارض، معالجة بق الفراش والصراصير، والتطهير في تونس (البحيرة 1، البحيرة 2، البحيرة 3، المرسى، الكرم، أريانة). اتصل على 50 431 208.",
+      "مكافحة الحشرات والقوارض، معالجة بق الفراش والصراصير، والتطهير من بنزرت للمهدية. اتصل على 50 431 208.",
   },
 };
 

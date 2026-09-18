@@ -9,6 +9,7 @@ export const SERVICE_SLUGS = [
   "punaises-de-lit",
   "desinfection",
   "traitement-nuisibles",
+  "puces",
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
@@ -20,6 +21,7 @@ export type SeoPageId =
   | "punaises"
   | "desinfection"
   | "nuisibles"
+  | "puces"
   | "apropos"
   | "zones"
   | "faq"
@@ -37,6 +39,8 @@ export function serviceSlugToSeo(slug: ServiceSlug): SeoPageId {
       return "desinfection";
     case "traitement-nuisibles":
       return "nuisibles";
+    case "puces":
+      return "puces";
   }
 }
 
@@ -56,8 +60,9 @@ export function pageMetadata(
     alternates: {
       canonical,
       languages: {
-        fr: `/fr${path}`,
+        "x-default": `/ar${path}`,
         ar: `/ar${path}`,
+        fr: `/fr${path}`,
       },
     },
     openGraph: {

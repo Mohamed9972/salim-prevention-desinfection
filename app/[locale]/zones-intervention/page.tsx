@@ -30,32 +30,31 @@ export default async function ZonesPage({ params }: Props) {
       />
       <PageHero
         locale={locale}
-        eyebrow={t.areas.eyebrow}
         title={t.zonesPage.heroTitle}
         subtitle={t.zonesPage.heroSub}
       />
-      <section className="bg-white">
+      <section className="bg-paper">
         <div className="mx-auto max-w-6xl px-4 pb-6 sm:px-6">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {t.zonesPage.zones.map((zone, i) => (
               <Reveal key={zone.name} delay={Math.min(i * 60, 240)}>
-                <article className="h-full rounded-3xl border border-ink-100 bg-ink-50/50 p-6 transition-all hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_40px_rgba(11,21,26,0.08)]">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-700 text-white">
+                <article className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(7,24,20,0.12)]">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-950 text-brand-300">
                     <MapPin size={20} aria-hidden="true" />
                   </span>
-                  <h2 className="mt-4 text-lg font-extrabold text-ink-950">{zone.name}</h2>
+                  <h2 className="mt-4 font-display text-lg font-extrabold text-ink-950">{zone.name}</h2>
                   <p className="mt-1.5 text-[15px] leading-relaxed text-ink-600">{zone.desc}</p>
                 </article>
               </Reveal>
             ))}
           </div>
           <Reveal>
-            <p className="mt-8 rounded-3xl bg-ink-900 px-6 py-5 text-center text-[15px] leading-relaxed text-white/85">
+            <p className="mt-8 rounded-[26px] bg-ink-950 px-6 py-5 text-center text-[15px] leading-relaxed text-white/85">
               {t.zonesPage.note}
             </p>
           </Reveal>
           <Reveal>
-            <h2 className="mt-10 text-xl font-extrabold text-ink-950">
+            <h2 className="mt-10 font-display text-xl font-extrabold text-ink-950">
               {t.zonesPage.relatedTitle}
             </h2>
             <ul className="mt-4 flex flex-wrap gap-2.5">

@@ -1,32 +1,63 @@
 @import "tailwindcss";
 
+/*
+ * RADE NOCTURNE — visual world tokens.
+ * Paper ground, deep sea-pine ink, one lantern-amber accent.
+ */
 @theme {
-  --font-sans: var(--font-inter), var(--font-arabic), ui-sans-serif, system-ui,
+  --font-display: var(--font-bricolage), var(--font-cairo), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-sans: var(--font-archivo), var(--font-cairo), ui-sans-serif, system-ui,
     "Segoe UI", Tahoma, Arial, sans-serif;
 
-  --color-brand-50: #eef8fa;
-  --color-brand-100: #d7eef3;
-  --color-brand-200: #b0dde7;
-  --color-brand-300: #7cc4d4;
-  --color-brand-400: #45a5bc;
-  --color-brand-500: #2989a3;
-  --color-brand-600: #0e7490;
-  --color-brand-700: #0f6278;
-  --color-brand-800: #134f61;
-  --color-brand-900: #143e4e;
-  --color-brand-950: #0a2833;
+  /* Rade — deep sea-pine ink (replaces neutral ink) */
+  --color-ink-50: #eff5f1;
+  --color-ink-100: #d9e7de;
+  --color-ink-200: #b3cfc0;
+  --color-ink-300: #84ac9a;
+  --color-ink-400: #558a75;
+  --color-ink-500: #35705b;
+  --color-ink-600: #235c49;
+  --color-ink-700: #1b4a3b;
+  --color-ink-800: #143a2f;
+  --color-ink-900: #0d2921;
+  --color-ink-950: #071814;
 
-  --color-ink-50: #f6f8f9;
-  --color-ink-100: #e9eef1;
-  --color-ink-200: #d3dde2;
-  --color-ink-300: #b0c2cb;
-  --color-ink-400: #86a1ad;
-  --color-ink-500: #668491;
-  --color-ink-600: #546d78;
-  --color-ink-700: #465963;
-  --color-ink-800: #22333b;
-  --color-ink-900: #132027;
-  --color-ink-950: #0b151a;
+  /* Fanal — lantern amber, the single accent (replaces teal brand) */
+  --color-brand-50: #fdf5e3;
+  --color-brand-100: #fae8c4;
+  --color-brand-200: #f5d189;
+  --color-brand-300: #eeb651;
+  --color-brand-400: #e79e22;
+  --color-brand-500: #e08e0b;
+  --color-brand-600: #be7106;
+  --color-brand-700: #9a5b08;
+  --color-brand-800: #7a4a0c;
+  --color-brand-900: #5f3a10;
+  --color-brand-950: #3a2408;
+
+  /* Paper — warm foam ground for light sections */
+  --color-paper: #faf6ed;
+  --color-paper-deep: #f2ebdb;
+
+  --ease-harbor: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee: marquee 36s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Arabic locale: Cairo carries both display and text voices. */
+:root:lang(ar) {
+  --font-display: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -34,7 +65,7 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: var(--color-paper);
   color: var(--color-ink-900);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -42,47 +73,112 @@ body {
 }
 
 ::selection {
-  background: var(--color-brand-600);
-  color: #fff;
+  background: var(--color-brand-400);
+  color: var(--color-ink-950);
 }
 
 input,
 textarea,
 select {
-  caret-color: var(--color-brand-700);
+  caret-color: var(--color-brand-600);
+}
+
+/* Themed scrollbar — the parts nobody draws still carry the design. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-200) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-ink-200);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Visible focus for keyboard navigation */
 :focus-visible {
-  outline: 3px solid var(--color-brand-500);
+  outline: 3px solid var(--color-brand-600);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Light reveal animation (disabled on reduced motion) */
+/* Harbor reveal: exponential ease-out from an already-nearby default. */
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(22px);
+    filter: blur(4px);
     transition:
-      opacity 0.6s ease,
-      transform 0.6s ease;
+      opacity 0.7s var(--ease-harbor),
+      transform 0.7s var(--ease-harbor),
+      filter 0.7s var(--ease-harbor);
   }
   .reveal.is-visible {
     opacity: 1;
     transform: none;
+    filter: none;
   }
-  [dir="rtl"] .reveal {
-    transform: translateY(18px);
+
+  /* First-viewport entrance (hero): plays once on load. */
+  @keyframes harbor-rise {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+  .harbor-in {
+    animation: harbor-rise 0.9s var(--ease-harbor) both;
+  }
+
+  /* Zone ticker: halts on hover, focus, or reduced motion. */
+  .marquee-track {
+    animation: var(--animate-marquee);
+  }
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* Lantern pulse for the live-availability dot. */
+  @keyframes lantern-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(231, 158, 34, 0.55);
+    }
+    60% {
+      box-shadow: 0 0 0 9px rgba(231, 158, 34, 0);
+    }
+  }
+  .lantern-dot {
+    animation: lantern-pulse 2.4s ease-out infinite;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .reveal {
+  .reveal,
+  .harbor-in {
     opacity: 1;
     transform: none;
+    filter: none;
+    animation: none;
+  }
+  .marquee-track {
+    animation: none;
   }
   *,
   *::before,
@@ -90,6 +186,21 @@ select {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Film grain for night surfaces — texture, not decoration. */
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
 }
 
 /* Prevent mobile CTA from hiding footer content */

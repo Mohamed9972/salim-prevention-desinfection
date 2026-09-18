@@ -21,10 +21,10 @@ export function FaqList({
         return (
           <Reveal key={item.q} delay={Math.min(i * 40, 200)}>
             <div
-              className={`overflow-hidden rounded-2xl border bg-white transition-colors ${
+              className={`overflow-hidden rounded-2xl border bg-white transition-all duration-300 ${
                 isOpen
-                  ? "border-brand-300 shadow-[0_8px_28px_rgba(14,116,144,0.10)]"
-                  : "border-ink-100"
+                  ? "border-brand-400 shadow-[0_12px_34px_rgba(224,142,11,0.14)]"
+                  : "border-ink-900/10 hover:border-brand-300"
               }`}
             >
               <h3>
@@ -38,9 +38,9 @@ export function FaqList({
                 >
                   {item.q}
                   <span
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all ${
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                       isOpen
-                        ? "rotate-180 bg-brand-700 text-white"
+                        ? "rotate-180 bg-brand-400 text-ink-950"
                         : "bg-ink-50 text-ink-600"
                     }`}
                   >

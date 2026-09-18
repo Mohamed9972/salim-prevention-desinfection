@@ -33,15 +33,14 @@ export default async function FaqPage({ params }: Props) {
       />
       <PageHero
         locale={locale}
-        eyebrow={t.faq.eyebrow}
         title={t.faqPage.heroTitle}
         subtitle={t.faqPage.heroSub}
       />
-      <section className="bg-white">
+      <section className="bg-paper">
         <div className="mx-auto max-w-4xl px-4 pb-6 sm:px-6">
           <FaqList items={items} idPrefix="page-faq" />
           <Reveal>
-            <h2 className="mt-10 text-xl font-extrabold text-ink-950">
+            <h2 className="mt-10 font-display text-xl font-extrabold text-ink-950">
               {locale === "ar" ? "خدماتنا" : "Nos services"}
             </h2>
             <ul className="mt-4 flex flex-wrap gap-2.5">

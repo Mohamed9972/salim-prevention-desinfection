@@ -28,22 +28,23 @@ export default async function ContactPage({ params }: Props) {
         locale={locale}
         items={[{ label: t.nav.home, href: `/${locale}` }, { label: t.nav.contact }]}
       />
-      <div className="bg-white">
+      <div className="bg-paper">
         <div className="mx-auto max-w-6xl px-4 pt-10 sm:px-6 md:pt-14">
           <Reveal>
-            <h1 className="max-w-3xl text-balance text-4xl font-extrabold leading-[1.15] tracking-tight text-ink-950 sm:text-5xl">
+            <h1 className="max-w-3xl text-balance font-display text-4xl font-extrabold leading-[1.08] tracking-[-0.02em] text-ink-950 sm:text-6xl">
+              <span aria-hidden="true" className="mb-5 block h-2.5 w-14 rounded-full bg-brand-400" />
               {t.contactPage.heroTitle}
             </h1>
-            <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-ink-600">
+            <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-ink-600">
               {t.contactPage.heroSub}
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={PHONE_TEL}
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-700 px-7 text-base font-bold text-white shadow-[0_8px_24px_rgba(14,116,144,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brand-800"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_10px_30px_rgba(224,142,11,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300"
               >
                 <Phone size={18} aria-hidden="true" />
-                <span dir="ltr">{PHONE_DISPLAY}</span>
+                <span dir="ltr" className="tabular-nums">{PHONE_DISPLAY}</span>
               </a>
               <a
                 href={WHATSAPP_BASE}
@@ -56,7 +57,7 @@ export default async function ContactPage({ params }: Props) {
               </a>
               <a
                 href={EMAIL_HREF}
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-900 px-7 text-base font-bold text-ink-900 transition-colors hover:bg-ink-900 hover:text-white"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl border-2 border-ink-950 px-7 text-base font-bold text-ink-950 transition-colors hover:bg-ink-950 hover:text-white"
               >
                 <Mail size={18} aria-hidden="true" />
                 {t.contact.direct.email}

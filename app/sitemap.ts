@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
   for (const path of PATHS) {
-    for (const locale of ["fr", "ar"] as const) {
+    for (const locale of ["ar", "fr"] as const) {
       entries.push({
         url: `${SITE_URL}/${locale}${path}`,
         lastModified: now,
