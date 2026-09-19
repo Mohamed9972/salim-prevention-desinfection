@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated / local-only artifacts: never lint these.
+    ".open-next/**",
+    ".vercel/**",
+    ".playwright-mcp/**",
   ]),
 ]);
 

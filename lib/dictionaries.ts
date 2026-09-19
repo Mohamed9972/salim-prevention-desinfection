@@ -187,6 +187,12 @@ export const fr = {
       "Intervention sur le terrain — vidéo Facebook 1",
       "Intervention sur le terrain — vidéo Facebook 2",
     ],
+    localFrames: [
+      "Intervention sur le terrain — vidéo 1",
+      "Intervention sur le terrain — vidéo 2",
+      "Intervention sur le terrain — vidéo 3",
+      "Intervention sur le terrain — vidéo 4",
+    ],
   },
   why: {
     eyebrow: "À propos",
@@ -1100,6 +1106,12 @@ export const ar: Dictionary = {
     frames: [
       "تدخل ميداني — فيديو فيسبوك 1",
       "تدخل ميداني — فيسبوك 2",
+    ],
+    localFrames: [
+      "تدخل ميداني — فيديو 1",
+      "تدخل ميداني — فيديو 2",
+      "تدخل ميداني — فيديو 3",
+      "تدخل ميداني — فيديو 4",
     ],
   },
   why: {

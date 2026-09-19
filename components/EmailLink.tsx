@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useSyncExternalStore, type ReactNode } from "react";
 import { EMAIL } from "@/lib/site";
 
 // Split at module scope so the SSR HTML never contains a harvestable
@@ -8,6 +8,10 @@ import { EMAIL } from "@/lib/site";
 // client-side only, after mount. (The parts remain in the JS bundle —
 // this defeats naive HTML scrapers, not targeted extraction.)
 const [USER, DOMAIN] = EMAIL.split("@");
+
+function subscribeNoop() {
+  return () => {};
+}
 
 /**
  * Wrapper lien email anti-scraping.
@@ -24,10 +28,14 @@ export function EmailLink({
   addressClassName?: string;
   children?: ReactNode;
 }) {
-  const [live, setLive] = useState(false);
-  useEffect(() => {
-    setLive(true);
-  }, []);
+  // Client-only reveal without setState-in-effect: the SSR snapshot stays
+  // false (no harvestable address in the HTML), the client snapshot is
+  // always true after hydration. Single mount flip, no render cascade.
+  const live = useSyncExternalStore(
+    subscribeNoop,
+    () => true,
+    () => false,
+  );
   if (!live) {
     return (
       <span className={className}>

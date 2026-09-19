@@ -20,6 +20,13 @@ const REELS = [
   },
 ];
 
+const LOCAL_VIDEOS = [
+  "/service-video-1.mp4",
+  "/service-video-2.mp4",
+  "/service-video-3.mp4",
+  "/service-video-4.mp4",
+];
+
 export function VideoSection({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   const isRtl = locale === "ar";
@@ -57,6 +64,28 @@ export function VideoSection({ locale }: { locale: Locale }) {
                     <ExternalLink size={15} aria-hidden="true" />
                     {t.video.watchOn}
                   </a>
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+          {LOCAL_VIDEOS.map((src, i) => (
+            <Reveal key={src} delay={Math.min(i * 120, 240)}>
+              <figure className="flex flex-col items-center">
+                <div className="rounded-[30px] bg-ink-950 p-2.5 shadow-[0_24px_60px_rgba(11,21,26,0.35)] ring-1 ring-brand-400/30 transition-transform duration-300 hover:-translate-y-1">
+                  <video
+                    src={src}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    width={267}
+                    height={474}
+                    className="block h-[474px] w-[267px] max-w-[calc(100vw-80px)] rounded-[22px] border-0 bg-ink-900 object-cover"
+                    title={t.video.localFrames[i] ?? t.video.localFrames[0]}
+                    aria-label={t.video.localFrames[i] ?? t.video.localFrames[0]}
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm font-bold text-ink-600">
+                  {t.video.localFrames[i] ?? t.video.localFrames[0]}
                 </figcaption>
               </figure>
             </Reveal>

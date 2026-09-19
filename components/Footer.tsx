@@ -24,7 +24,7 @@ export function Footer({ locale }: { locale: Locale }) {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.2fr_0.9fr_0.7fr_1fr] md:py-20">
         <div>
           <Logo locale={locale} tone="light" />
-          <p className="mt-2 text-sm font-medium text-white/50">{COMPANY_AR}</p>
+          <p lang="ar" dir="auto" className="mt-2 text-sm font-medium text-white/50">{COMPANY_AR}</p>
           <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-white/65">{t.footer.tagline}</p>
           <a
             href={PHONE_TEL}

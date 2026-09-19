@@ -16,7 +16,7 @@ import { EmailLink } from "./EmailLink";
 import { SectionHeading } from "./SectionHeading";
 
 const inputCls =
-  "w-full rounded-2xl border border-ink-900/15 bg-white px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-500 transition-colors focus:border-brand-500 focus:outline-none";
+  "w-full rounded-2xl border border-ink-900/15 bg-white px-4 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-600 transition-colors focus:border-brand-500 focus:outline-none";
 const labelCls = "mb-1.5 block text-sm font-bold text-ink-800";
 const errCls = "mt-1.5 text-[13px] font-medium text-red-700";
 

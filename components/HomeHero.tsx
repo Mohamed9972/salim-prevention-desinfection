@@ -26,10 +26,20 @@ export function HomeHero({ locale }: { locale: Locale }) {
         poster="/hero-intervention.jpg"
         aria-hidden="true"
         tabIndex={-1}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
+      {/* Reduced-motion fallback: static poster (matches the video frame). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/hero-intervention.jpg"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        decoding="async"
+        className="absolute inset-0 hidden h-full w-full object-cover motion-reduce:block"
+      />
       {/* night grade: deep pine over the video so the text stays readable */}
       <div aria-hidden="true" className="absolute inset-0 bg-ink-950/55" />
       <div
