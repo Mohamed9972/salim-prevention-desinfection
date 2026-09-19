@@ -84,20 +84,23 @@ select {
   caret-color: var(--color-brand-600);
 }
 
-/* Themed scrollbar — the parts nobody draws still carry the design. */
+/* Themed scrollbar — logo blue so it carries the design. */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-ink-200) transparent;
+  scrollbar-color: var(--color-brand-500) transparent;
 }
 *::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 *::-webkit-scrollbar-thumb {
-  background: var(--color-ink-200);
+  background: var(--color-brand-500);
   border-radius: 8px;
   border: 2px solid transparent;
   background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-600);
 }
 *::-webkit-scrollbar-track {
   background: transparent;
