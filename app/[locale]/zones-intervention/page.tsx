@@ -38,7 +38,7 @@ export default async function ZonesPage({ params }: Props) {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {t.zonesPage.zones.map((zone, i) => (
               <Reveal key={zone.name} delay={Math.min(i * 60, 240)}>
-                <article className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(7,24,20,0.12)]">
+                <article className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(11,21,26,0.12)]">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-950 text-brand-300">
                     <MapPin size={20} aria-hidden="true" />
                   </span>

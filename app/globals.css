@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 /*
- * RADE NOCTURNE — visual world tokens.
- * Paper ground, deep sea-pine ink, one lantern-amber accent.
+ * SALIM LOGO — visual world tokens.
+ * White ground, slate ink + teal brand sampled from public/logo.png
+ * (slate #3F5A65, teal #299CB9).
  */
 @theme {
   --font-display: var(--font-bricolage), var(--font-cairo), ui-sans-serif, system-ui,
@@ -10,35 +11,35 @@
   --font-sans: var(--font-archivo), var(--font-cairo), ui-sans-serif, system-ui,
     "Segoe UI", Tahoma, Arial, sans-serif;
 
-  /* Rade — deep sea-pine ink (replaces neutral ink) */
-  --color-ink-50: #eff5f1;
-  --color-ink-100: #d9e7de;
-  --color-ink-200: #b3cfc0;
-  --color-ink-300: #84ac9a;
-  --color-ink-400: #558a75;
-  --color-ink-500: #35705b;
-  --color-ink-600: #235c49;
-  --color-ink-700: #1b4a3b;
-  --color-ink-800: #143a2f;
-  --color-ink-900: #0d2921;
-  --color-ink-950: #071814;
+  /* Slate ink — logo dark (#3F5A65 family) */
+  --color-ink-50: #f6f8f9;
+  --color-ink-100: #e9eef1;
+  --color-ink-200: #d3dde2;
+  --color-ink-300: #b0c2cb;
+  --color-ink-400: #86a1ad;
+  --color-ink-500: #668491;
+  --color-ink-600: #546d78;
+  --color-ink-700: #465963;
+  --color-ink-800: #22333b;
+  --color-ink-900: #132027;
+  --color-ink-950: #0b151a;
 
-  /* Fanal — lantern amber, the single accent (replaces teal brand) */
-  --color-brand-50: #fdf5e3;
-  --color-brand-100: #fae8c4;
-  --color-brand-200: #f5d189;
-  --color-brand-300: #eeb651;
-  --color-brand-400: #e79e22;
-  --color-brand-500: #e08e0b;
-  --color-brand-600: #be7106;
-  --color-brand-700: #9a5b08;
-  --color-brand-800: #7a4a0c;
-  --color-brand-900: #5f3a10;
-  --color-brand-950: #3a2408;
+  /* Logo teal — sampled #299CB9 family, single accent */
+  --color-brand-50: #eef8fa;
+  --color-brand-100: #d7eef3;
+  --color-brand-200: #b0dde7;
+  --color-brand-300: #7cc4d4;
+  --color-brand-400: #299cb9;
+  --color-brand-500: #238aa6;
+  --color-brand-600: #0e7490;
+  --color-brand-700: #0f6278;
+  --color-brand-800: #134f61;
+  --color-brand-900: #143e4e;
+  --color-brand-950: #0a2833;
 
-  /* Paper — warm foam ground for light sections */
-  --color-paper: #faf6ed;
-  --color-paper-deep: #f2ebdb;
+  /* Paper — white ground + light blue-grey alternating sections */
+  --color-paper: #ffffff;
+  --color-paper-deep: #eef4f6;
 
   --ease-harbor: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -73,8 +74,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-brand-400);
-  color: var(--color-ink-950);
+  background: var(--color-brand-600);
+  color: #fff;
 }
 
 input,
@@ -152,14 +153,14 @@ select {
     animation-play-state: paused;
   }
 
-  /* Lantern pulse for the live-availability dot. */
+  /* Logo-teal pulse for the live-availability dot. */
   @keyframes lantern-pulse {
     0%,
     100% {
-      box-shadow: 0 0 0 0 rgba(231, 158, 34, 0.55);
+      box-shadow: 0 0 0 0 rgba(41, 156, 185, 0.55);
     }
     60% {
-      box-shadow: 0 0 0 9px rgba(231, 158, 34, 0);
+      box-shadow: 0 0 0 9px rgba(41, 156, 185, 0);
     }
   }
   .lantern-dot {

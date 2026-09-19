@@ -33,7 +33,7 @@ export function ReviewsSection({ locale }: { locale: Locale }) {
           {REVIEW_POSTS.map((post, i) => (
             <Reveal key={post.watch} delay={Math.min(i * 120, 240)}>
               <figure className="flex flex-col items-center">
-                <div className="overflow-hidden rounded-[24px] border border-ink-900/10 bg-white shadow-[0_20px_50px_rgba(7,24,20,0.12)]">
+                <div className="overflow-hidden rounded-[24px] border border-ink-900/10 bg-white shadow-[0_20px_50px_rgba(11,21,26,0.12)]">
                   <p className="border-b border-ink-900/10 bg-ink-950 px-5 py-3 text-[13px] font-bold tracking-wide text-brand-300">
                     Facebook
                   </p>

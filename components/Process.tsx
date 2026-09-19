@@ -36,7 +36,7 @@ export function Process({ locale }: { locale: Locale }) {
           <div className="mt-10 text-center">
             <a
               href={`/${locale}/contact`}
-              className="group inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-9 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(231,158,34,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98]"
+              className="group inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-9 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(41,156,185,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98]"
             >
               {t.process.cta}
               <ArrowRight

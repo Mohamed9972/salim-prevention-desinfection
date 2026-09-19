@@ -62,10 +62,10 @@ export function ServicesGrid({
             <article
               className={`group flex h-full flex-col rounded-[26px] border p-7 transition-all duration-300 hover:-translate-y-1 sm:p-8 ${TILT} ${
                 lead
-                  ? "grain border-ink-800 bg-ink-950 text-white hover:border-brand-500/60 hover:shadow-[0_24px_60px_rgba(7,24,20,0.45)] sm:flex-row sm:items-center sm:gap-8"
+                  ? "grain border-ink-800 bg-ink-950 text-white hover:border-brand-500/60 hover:shadow-[0_24px_60px_rgba(11,21,26,0.45)] sm:flex-row sm:items-center sm:gap-8"
                   : closing
-                    ? "border-brand-300 bg-white hover:border-brand-500 hover:shadow-[0_20px_50px_rgba(224,142,11,0.16)] sm:flex-row sm:items-center sm:gap-8"
-                    : "border-ink-900/10 bg-white hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(7,24,20,0.14)]"
+                    ? "border-brand-300 bg-white hover:border-brand-500 hover:shadow-[0_20px_50px_rgba(41,156,185,0.16)] sm:flex-row sm:items-center sm:gap-8"
+                    : "border-ink-900/10 bg-white hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(11,21,26,0.14)]"
               }`}
             >
               <span

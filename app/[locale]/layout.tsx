@@ -36,7 +36,7 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#071814",
+  themeColor: "#0b151a",
 };
 
 export async function generateMetadata({
@@ -164,7 +164,7 @@ export default async function LocaleLayout({
           aria-hidden="true"
           className="hidden"
           dangerouslySetInnerHTML={{
-            __html: `<!-- RADE NOCTURNE direction contract (seed d29218b8): THESIS — protection as a lit harbor at night; the page reads night to dawn, pests own the dark, Salim owns the light, every surface offers call/WhatsApp/quote within one glance. OWN-WORLD — warm paper ground, deep sea-pine ink, one lantern-amber accent; Bricolage Grotesque display / Cairo Black Arabic voice; bento berths, ports-of-call ticker, totem phone numerals, one living WebGL harbor-light moment. STORY — a worried visitor understands in seconds, believes (real zones, steps, counts only), and acts (amber CTA always near). FIRST VIEWPORT — full-bleed night-graded photo plus WebGL shimmer plus horizon glow; start-aligned giant display title, amber primary action, call ghost, trust ticks, location line; no kicker above the heading. FORM — assigned direction 5 of the grounded list (safe harbor at dusk), raised by Deco thresholds, cue phases, totem numerals, living material. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance. -->`,
+            __html: `<!-- SALIM LOGO direction (client request): palette sampled from public/logo.png — slate ink #3F5A65 family, logo teal #299CB9 accent; white ground, Bricolage Grotesque display / Cairo Arabic voice; every surface offers call/WhatsApp/quote within one glance; teal CTA always near. -->`,
           }}
         />
         <a

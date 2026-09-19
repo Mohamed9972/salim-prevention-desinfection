@@ -355,17 +355,15 @@ export const fr = {
   home: {
     hero: {
       badge: "Intervention professionnelle à Tunis et environs",
-      title: "Votre solution professionnelle contre les nuisibles",
-      subtitle:
-        "Désinsectisation, dératisation, désinfection et traitement des nuisibles en Tunisie.",
+      title: "Débarrassez-vous de tous les insectes, reptiles et rongeurs",
+      subtitle: "Avec des solutions efficaces et sûres.",
       primary: "Demander une intervention",
       secondary: "50 431 208",
     },
     preview: {
       eyebrow: "Nos services",
       title: "Nos services",
-      subtitle:
-        "Six pôles d'intervention pour les maisons comme pour les locaux professionnels.",
+      subtitle: "Élimination de tous types de nuisibles.",
       more: "En savoir plus",
       all: "Voir tous les services",
     },
@@ -1268,15 +1266,15 @@ export const ar: Dictionary = {
   home: {
     hero: {
       badge: "تدخل مهني من بنزرت للمهدية",
-      title: "حلّك المهني ضد الحشرات والآفات",
-      subtitle: "مكافحة الحشرات والقوارض والتطهير ومعالجة الآفات في تونس.",
+      title: "تخلّص من جميع أنواع الحشرات والزواحف والقوارض",
+      subtitle: "بحلول فعّالة وآمنة.",
       primary: "اطلب تدخلاً الآن",
       secondary: "50 431 208",
     },
     preview: {
       eyebrow: "خدماتنا",
       title: "خدماتنا",
-      subtitle: "ستة مجالات تدخل للديار كما للمحلات المهنية.",
+      subtitle: "التخلّص من جميع أنواع الآفات",
       more: "اكتشف المزيد",
       all: "شوف الخدمات الكل",
     },

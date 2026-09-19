@@ -72,7 +72,7 @@ export function Contact({ locale }: { locale: Locale }) {
                 }
                 window.open(waHref, "_blank", "noopener,noreferrer");
               }}
-              className="rounded-[26px] border border-ink-900/10 bg-white p-6 shadow-[0_20px_50px_rgba(7,24,20,0.08)] sm:p-8"
+              className="rounded-[26px] border border-ink-900/10 bg-white p-6 shadow-[0_20px_50px_rgba(11,21,26,0.08)] sm:p-8"
               aria-label={t.contact.title}
             >
               <div className="grid gap-5 sm:grid-cols-2">
@@ -174,7 +174,7 @@ export function Contact({ locale }: { locale: Locale }) {
               <div className="mt-6 flex flex-col gap-3">
                 <button
                   type="submit"
-                  className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_10px_30px_rgba(224,142,11,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+                  className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_10px_30px_rgba(41,156,185,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
                 >
                   <MessageCircle size={19} aria-hidden="true" />
                   {touched && !valid ? f.viaWhatsapp : f.submit}

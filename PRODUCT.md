@@ -40,11 +40,11 @@ What a competitor cannot truthfully copy: one reachable technician-team with a s
 
 - Legal/public name: **شركة سليم للوقاية و التطهير** / **Salim — Prévention et Désinfection**. Must stay verbatim wherever it appears.
 - Tone: direct, honest, professional; Tunisian-dialect Arabic, plain French. No hype, no fear-mongering.
-- Existing assets that survive the rebrand: `public/hero-intervention.jpg` (technician photo, may be re-graded or re-cropped but not replaced without user approval), Facebook video embeds, Facebook review embed.
+- Existing assets that survive the rebrand: `public/hero-intervention.jpg` (hero video poster — cockroach close-up frame extracted from `public/hero-video.mp4`, replaced with user approval 2026-09-19 to match the video; the original technician photo is superseded), Facebook video embeds, Facebook review embed.
 
 ## Evidence on Hand
 
-- Technician photo: `public/hero-intervention.jpg` (landscape).
+- Hero poster: `public/hero-intervention.jpg` (landscape video frame, matches `public/hero-video.mp4`).
 - Real review: one Facebook post embed (`components/ReviewsSection.tsx` → `REVIEW_POSTS`).
 - Real videos: Facebook video embeds (`components/VideoSection.tsx`).
 - Full FR/AR service catalog, zone list, FAQ, and process copy in `lib/dictionaries.ts` (source of truth — do not rewrite factual copy).

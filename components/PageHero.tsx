@@ -5,7 +5,7 @@ import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 /**
- * Rade Nocturne subpage hero: paper ground, a horizon rule overhead,
+ * Subpage hero: paper ground, a horizon rule overhead,
  * and a display title that carries its own weight — no kicker.
  */
 export function PageHero({
@@ -49,7 +49,7 @@ export function PageHero({
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href={`/${locale}/${ctaTo}`}
-              className="group inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-ink-950 px-8 text-base font-bold text-white shadow-[0_12px_30px_rgba(7,24,20,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-ink-800 active:translate-y-0 active:scale-[0.98]"
+              className="group inline-flex min-h-[54px] items-center justify-center gap-2 rounded-2xl bg-ink-950 px-8 text-base font-bold text-white shadow-[0_12px_30px_rgba(11,21,26,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-ink-800 active:translate-y-0 active:scale-[0.98]"
             >
               {t.nav.cta}
               <ArrowRight

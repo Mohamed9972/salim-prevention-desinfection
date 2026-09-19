@@ -23,7 +23,7 @@ export function FaqList({
             <div
               className={`overflow-hidden rounded-2xl border bg-white transition-all duration-300 ${
                 isOpen
-                  ? "border-brand-400 shadow-[0_12px_34px_rgba(224,142,11,0.14)]"
+                  ? "border-brand-400 shadow-[0_12px_34px_rgba(41,156,185,0.14)]"
                   : "border-ink-900/10 hover:border-brand-300"
               }`}
             >

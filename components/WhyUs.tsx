@@ -20,7 +20,7 @@ export function WhyUs({ locale }: { locale: Locale }) {
               const Icon = ICONS[i % ICONS.length];
               return (
                 <Reveal key={c.title} delay={(i % 2) * 80}>
-                  <article className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 shadow-[0_10px_30px_rgba(7,24,20,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-400">
+                  <article className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 shadow-[0_10px_30px_rgba(11,21,26,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-400">
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-950 text-brand-300">
                       <Icon size={21} aria-hidden="true" />
                     </span>

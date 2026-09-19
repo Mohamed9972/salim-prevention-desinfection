@@ -50,7 +50,7 @@ export default async function AboutPage({ params }: Props) {
           <ol className="mt-6 grid gap-4 sm:grid-cols-2">
             {t.aboutPage.approach.map((step, i) => (
               <Reveal key={step.title} delay={Math.min(i * 80, 240)}>
-                <li className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(7,24,20,0.12)]">
+                <li className="h-full rounded-[26px] border border-ink-900/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400 hover:shadow-[0_20px_50px_rgba(11,21,26,0.12)]">
                   <span
                     aria-hidden="true"
                     className="font-display text-4xl font-extrabold tabular-nums tracking-tight text-brand-300"

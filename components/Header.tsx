@@ -81,7 +81,7 @@ export function Header({ locale }: { locale: Locale }) {
   return (
     <header
       className={`sticky top-0 z-50 border-b bg-paper/90 backdrop-blur-md transition-shadow duration-300 ${
-        scrolled ? "border-ink-900/10 shadow-[0_4px_24px_rgba(7,24,20,0.10)]" : "border-transparent"
+        scrolled ? "border-ink-900/10 shadow-[0_4px_24px_rgba(11,21,26,0.10)]" : "border-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 md:h-[72px]">
@@ -120,7 +120,7 @@ export function Header({ locale }: { locale: Locale }) {
             </div>
             {dropOpen && (
               <div className="absolute start-0 top-full w-64 pt-2">
-                <ul className="overflow-hidden rounded-2xl border border-ink-900/10 bg-paper p-2 shadow-[0_20px_50px_rgba(7,24,20,0.16)]">
+                <ul className="overflow-hidden rounded-2xl border border-ink-900/10 bg-paper p-2 shadow-[0_20px_50px_rgba(11,21,26,0.16)]">
                   {t.servicesIndex.map((s) => (
                     <li key={s.slug}>
                       <Link
@@ -150,7 +150,7 @@ export function Header({ locale }: { locale: Locale }) {
           <Link
             href={`/${locale}/contact`}
             onClick={closeAll}
-            className="rounded-full bg-ink-950 px-5 py-2.5 text-[15px] font-bold text-white shadow-[0_8px_22px_rgba(7,24,20,0.3)] transition-all duration-300 hover:-translate-y-px hover:bg-ink-800"
+            className="rounded-full bg-ink-950 px-5 py-2.5 text-[15px] font-bold text-white shadow-[0_8px_22px_rgba(11,21,26,0.3)] transition-all duration-300 hover:-translate-y-px hover:bg-ink-800"
           >
             {t.nav.cta}
           </Link>

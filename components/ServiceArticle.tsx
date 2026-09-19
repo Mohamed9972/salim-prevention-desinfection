@@ -180,7 +180,7 @@ export function ServiceArticle({
                     <li key={s.slug}>
                       <a
                         href={`/${locale}/services/${s.slug}`}
-                        className="group flex items-center gap-4 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-[0_4px_16px_rgba(7,24,20,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400 hover:shadow-[0_16px_36px_rgba(7,24,20,0.12)]"
+                        className="group flex items-center gap-4 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-[0_4px_16px_rgba(11,21,26,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400 hover:shadow-[0_16px_36px_rgba(11,21,26,0.12)]"
                       >
                         {Icon && (
                           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ink-950 text-brand-300">

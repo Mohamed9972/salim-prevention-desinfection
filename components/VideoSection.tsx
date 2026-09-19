@@ -34,7 +34,7 @@ export function VideoSection({ locale }: { locale: Locale }) {
           {REELS.map((reel, i) => (
             <Reveal key={reel.watch} delay={Math.min(i * 120, 240)}>
               <figure className="flex flex-col items-center">
-                <div className="rounded-[30px] bg-ink-950 p-2.5 shadow-[0_24px_60px_rgba(7,24,20,0.35)] ring-1 ring-brand-400/30 transition-transform duration-300 hover:-translate-y-1">
+                <div className="rounded-[30px] bg-ink-950 p-2.5 shadow-[0_24px_60px_rgba(11,21,26,0.35)] ring-1 ring-brand-400/30 transition-transform duration-300 hover:-translate-y-1">
                   <iframe
                     src={reel.embed}
                     width={267}

@@ -41,7 +41,7 @@ export default async function ContactPage({ params }: Props) {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={PHONE_TEL}
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_10px_30px_rgba(224,142,11,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_10px_30px_rgba(41,156,185,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300"
               >
                 <Phone size={18} aria-hidden="true" />
                 <span dir="ltr" className="tabular-nums">{PHONE_DISPLAY}</span>

@@ -71,7 +71,7 @@ export function HomeHero({ locale }: { locale: Locale }) {
           >
             <a
               href={`/${locale}/contact`}
-              className="group inline-flex min-h-[56px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-9 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(231,158,34,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 hover:shadow-[0_20px_48px_rgba(231,158,34,0.4)] active:translate-y-0 active:scale-[0.98]"
+              className="group inline-flex min-h-[56px] items-center justify-center gap-2 rounded-2xl bg-brand-400 px-9 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(41,156,185,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 hover:shadow-[0_20px_48px_rgba(41,156,185,0.4)] active:translate-y-0 active:scale-[0.98]"
             >
               {h.primary}
               <ArrowRight

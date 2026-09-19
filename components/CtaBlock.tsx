@@ -5,7 +5,7 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_BASE } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 /**
- * The dawn close: night water, one horizon of lantern light,
+ * The closing band: slate night surface, one horizon of logo-teal light,
  * and the phone number set like a totem.
  */
 export function CtaBlock({
@@ -43,7 +43,7 @@ export function CtaBlock({
             <div className="relative z-10 mx-auto mt-9 flex max-w-2xl flex-col justify-center gap-3 sm:flex-row sm:items-center">
               <a
                 href={PHONE_TEL}
-                className="inline-flex min-h-[54px] flex-1 items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(231,158,34,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98]"
+                className="inline-flex min-h-[54px] flex-1 items-center justify-center gap-2 rounded-2xl bg-brand-400 px-7 text-base font-extrabold text-ink-950 shadow-[0_14px_38px_rgba(41,156,185,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-300 active:translate-y-0 active:scale-[0.98]"
               >
                 <Phone size={18} aria-hidden="true" />
                 {t.mobileCta.call}
