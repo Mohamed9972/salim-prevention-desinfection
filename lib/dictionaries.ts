@@ -179,14 +179,8 @@ export const fr = {
   video: {
     eyebrow: "En action",
     title: "Nos interventions en vidéo",
-    subtitle:
-      "Un aperçu réel de notre travail sur le terrain, publié sur notre page Facebook.",
-    watchOn: "Voir sur Facebook",
+    subtitle: "Un aperçu réel de notre travail sur le terrain.",
     cta: "Demander une intervention",
-    frames: [
-      "Intervention sur le terrain — vidéo Facebook 1",
-      "Intervention sur le terrain — vidéo Facebook 2",
-    ],
     localFrames: [
       "Intervention sur le terrain — vidéo 1",
       "Intervention sur le terrain — vidéo 2",
@@ -1100,13 +1094,8 @@ export const ar: Dictionary = {
   video: {
     eyebrow: "على الميدان",
     title: "تدخلاتنا بالفيديو",
-    subtitle: "لمحة حقيقية عن خدمتنا على الميدان، منشورة على صفحتنا في فيسبوك.",
-    watchOn: "شاهد على فيسبوك",
+    subtitle: "لمحة حقيقية عن خدمتنا على الميدان.",
     cta: "اطلب تدخلاً الآن",
-    frames: [
-      "تدخل ميداني — فيديو فيسبوك 1",
-      "تدخل ميداني — فيسبوك 2",
-    ],
     localFrames: [
       "تدخل ميداني — فيديو 1",
       "تدخل ميداني — فيديو 2",

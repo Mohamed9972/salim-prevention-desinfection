@@ -1,30 +1,15 @@
-import { ArrowRight, ExternalLink, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const REELS = [
-  {
-    watch: "https://www.facebook.com/reel/27052378877764068/",
-    embed:
-      "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F27052378877764068%2F&show_text=true&width=267&t=0",
-    height: 591,
-  },
-  {
-    watch: "https://www.facebook.com/reel/1440823641247632/",
-    embed:
-      "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1440823641247632%2F&show_text=false&width=267&t=0",
-    height: 476,
-  },
-];
-
 const LOCAL_VIDEOS = [
-  "/service-video-1.mp4",
-  "/service-video-2.mp4",
-  "/service-video-3.mp4",
-  "/service-video-4.mp4",
+  { src: "/service-video-1.mp4", poster: "/service-video-1-poster.jpg" },
+  { src: "/service-video-2.mp4", poster: "/service-video-2-poster.jpg" },
+  { src: "/service-video-3.mp4", poster: "/service-video-3-poster.jpg" },
+  { src: "/service-video-4.mp4", poster: "/service-video-4-poster.jpg" },
 ];
 
 export function VideoSection({ locale }: { locale: Locale }) {
@@ -38,42 +23,13 @@ export function VideoSection({ locale }: { locale: Locale }) {
           subtitle={t.video.subtitle}
         />
         <div className="mt-10 grid justify-items-center gap-8 sm:grid-cols-2 lg:gap-6">
-          {REELS.map((reel, i) => (
-            <Reveal key={reel.watch} delay={Math.min(i * 120, 240)}>
-              <figure className="flex flex-col items-center">
-                <div className="rounded-[30px] bg-ink-950 p-2.5 shadow-[0_24px_60px_rgba(11,21,26,0.35)] ring-1 ring-brand-400/30 transition-transform duration-300 hover:-translate-y-1">
-                  <iframe
-                    src={reel.embed}
-                    width={267}
-                    height={reel.height}
-                    className="block w-[267px] max-w-[calc(100vw-80px)] rounded-[22px] border-0 bg-ink-900"
-                    style={{ border: "none", overflow: "hidden", height: reel.height }}
-                    title={t.video.frames[i] ?? t.video.frames[0]}
-                    loading="lazy"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-                <figcaption className="mt-3">
-                  <a
-                    href={reel.watch}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 transition-colors hover:text-brand-600"
-                  >
-                    <ExternalLink size={15} aria-hidden="true" />
-                    {t.video.watchOn}
-                  </a>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-          {LOCAL_VIDEOS.map((src, i) => (
-            <Reveal key={src} delay={Math.min(i * 120, 240)}>
+          {LOCAL_VIDEOS.map((v, i) => (
+            <Reveal key={v.src} delay={Math.min(i * 120, 240)}>
               <figure className="flex flex-col items-center">
                 <div className="rounded-[30px] bg-ink-950 p-2.5 shadow-[0_24px_60px_rgba(11,21,26,0.35)] ring-1 ring-brand-400/30 transition-transform duration-300 hover:-translate-y-1">
                   <video
-                    src={src}
+                    src={v.src}
+                    poster={v.poster}
                     controls
                     playsInline
                     preload="metadata"
