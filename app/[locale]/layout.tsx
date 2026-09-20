@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MobileCta } from "@/components/MobileCta";
 import { getDictionary } from "@/lib/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
@@ -178,11 +177,10 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Header locale={loc} />
-        <main id="contenu" className="flex-1 pb-20 md:pb-0">
+        <main id="contenu" className="flex-1">
           {children}
         </main>
         <Footer locale={loc} />
-        <MobileCta locale={loc} />
       </body>
     </html>
   );
