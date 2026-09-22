@@ -2,6 +2,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
 	"name": "salim-prevention-desinfection",
+	"account_id": "b427d844bfb7581d5a34c0b3f0383dfc",
 	"compatibility_date": "2026-09-18",
 	"compatibility_flags": [
 		"nodejs_compat",
