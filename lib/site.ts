@@ -16,7 +16,7 @@ export const COMPANY_AR_SHORT = "شركة سليم للوقاية والتطهي
 export const COMPANY_FR = "Salim — Prévention et Désinfection";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://salim-desinfection.tn";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://salim-prevention-desinfection.tn";
 
 export function whatsappLink(message: string) {
   return `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;

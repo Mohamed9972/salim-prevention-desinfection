@@ -11,9 +11,8 @@ npm run build    # must pass (also type-checks; i18n parity is compiler-enforced
 npm run deploy   # opennextjs-cloudflare build + deploy to Cloudflare Workers
 ```
 
-- Canonical domain: `NEXT_PUBLIC_SITE_URL` in `.env.production` (currently the
-  staging Workers URL; change to `https://salim-desinfection.tn` at OVH
-  cutover, then rebuild + redeploy).
+- Canonical domain: `NEXT_PUBLIC_SITE_URL` in `.env.production` (currently
+  `https://salim-prevention-desinfection.tn`, bought at OVH order 259071503).
 - Contact paths are code constants in `lib/site.ts` (phone, WhatsApp, email).
 - Free-tier safe: Workers static serving only; do not add Neon/R2/paid services
   for this workload.
